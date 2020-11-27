@@ -1,28 +1,34 @@
 .price {
-  background-color: #F2F2F2;
+  background-color: @grey-background;
+
   .table {
     &__offers {
-      background-color: #283645;
+      background-color: @midnight;
+
       &-none {
-        background-color: #F2F2F2;
+        background-color: @grey-background;
       }
+
       &-title {
-        color: white;
-        font-size: 16px;
-        line-height: 30px;
-        font-weight: 300;
+        color: @white;
+        font-size: @font-size-medium;
+        line-height: @line-height-average;
+        font-weight: @font-weight-light;
+
         h3 {
-          font-weight: 700;
+          font-weight: @font-weight-bold;
         }
       }
     }
+
     &__description {
-      background-color: white;
+      background-color: @white;
+
       &-title {
-        color: #283645;
-        font-size: 14px;
-        line-height: 30px;
-        font-weight: 700;
+        color: @midnight;
+        font-size: @font-size-small;
+        line-height: @line-height-average;
+        font-weight: @font-weight-bold;
       }
     }
   }

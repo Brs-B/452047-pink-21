@@ -1,26 +1,29 @@
 .info {
-  background-color: #F2F2F2;
+  background-color: @grey-backround;
+
   &__offer {
-    background-color: white;
-    color: #283645;
-    font-size: 24px;
-    line-height: 29px;
-    font-weight: 300;
+    background-color: @white;
+    color: @midnight;
+    font-size: @font-size-huge;
+    line-height: @line-height-normal;
+    font-weight: @font-weight-light;
   }
+
   &__list {
     list-style: none;
   }
+
   &__title {
-    color:black;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 700;
-  }
-  &__description {
-    color: #283645;
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 400;
+    color: @black;
+    font-size: @font-size-big;
+    line-height: @line-height-more-small;
+    font-weight: @font-weight-bold;
   }
 
+  &__description {
+    color: @midnight;
+    font-size: @font-size-small;
+    line-height: @line-height-more-small;
+    font-weight: @font-weight-normal;
+  }
 }

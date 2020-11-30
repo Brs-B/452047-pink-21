@@ -1,0 +1,36 @@
+@import "../variables.less";
+
+.upload {
+  &__title {
+    color: @midnight;
+    font-size: @fontSizeSmall;
+    line-height: @lineHeightAverage;
+    font-weight: @fontWeightNormal;
+  }
+
+  &__filters {
+    background-color: @greyBackground;
+  }
+
+  .filters {
+    &__list {
+      list-style: none;
+    }
+  }
+
+  &__toggle-upload {
+    color: @pink;
+    font-size: @fontSizeBig;
+    line-height: @lineHeightTiny;
+    font-weight: @fontWeightBold;
+    border-color: @pink;
+  }
+
+  &__toggle-cancel {
+    color: @midnight;
+    font-size: @fontSizeBig;
+    line-height: @lineHeightTiny;
+    font-weight: @fontWeightBold;
+    opacity: 0.1;
+  }
+}

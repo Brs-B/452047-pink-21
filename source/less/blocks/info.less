@@ -1,26 +1,31 @@
+@import "../variables.less";
+
 .info {
-  background-color: #F2F2F2;
+  background-color: @greyBackground;
+
   &__offer {
-    background-color: white;
-    color: #283645;
-    font-size: 24px;
-    line-height: 29px;
-    font-weight: 300;
+    background-color: @white;
+    color: @midnight;
+    font-size: @fontSizeHuge;
+    line-height: @lineHeightNormal;
+    font-weight: @fontWeightLight;
   }
+
   &__list {
     list-style: none;
   }
+
   &__title {
-    color:black;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 700;
-  }
-  &__description {
-    color: #283645;
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 400;
+    color: @black;
+    font-size: @fontSizeBig;
+    line-height: @lineHeightMoreSmall;
+    font-weight: @fontWeightBold;
   }
 
+  &__description {
+    color: @midnight;
+    font-size: @fontSizeSmall;
+    line-height: @lineHeightMoreSmall;
+    font-weight: @fontWeightNormal;
+  }
 }

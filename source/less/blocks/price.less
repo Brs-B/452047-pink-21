@@ -1,28 +1,36 @@
+@import "../variables.less";
+
 .price {
-  background-color: #F2F2F2;
+  background-color: @greyBackground;
+
   .table {
     &__offers {
-      background-color: #283645;
+      background-color: @midnight;
+
       &-none {
-        background-color: #F2F2F2;
+        background-color: @greyBackground;
       }
+
       &-title {
-        color: white;
-        font-size: 16px;
-        line-height: 30px;
-        font-weight: 300;
+        color: @white;
+        font-size: @fontSizeMedium;
+        line-height: @lineHeightAverage;
+        font-weight: @fontWeightLight;
+
         h3 {
-          font-weight: 700;
+          font-weight: @fontWeightBold;
         }
       }
     }
+
     &__description {
-      background-color: white;
+      background-color: @white;
+
       &-title {
-        color: #283645;
-        font-size: 14px;
-        line-height: 30px;
-        font-weight: 700;
+        color: @midnight;
+        font-size: @fontSizeSmall;
+        line-height: @lineHeightAverage;
+        font-weight: @fontWeightBold;
       }
     }
   }

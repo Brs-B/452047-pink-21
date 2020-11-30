@@ -1,28 +1,35 @@
+@import "../variables.less";
+
 .contacts {
-  background-color: white;
+  background-color: @white;
+
   &__report-us {
-    color: #283645;
-    font-size: 24px;
-    line-height: 29px;
-    font-weight: 300;
+    color: @midnight;
+    font-size: @fontSizeHuge;
+    line-height: @lineHeightNormal;
+    font-weight: @fontWeightLight;
   }
+
   &__list {
     list-style: none;
   }
+
   &__title {
-    color: #283645;
-    font-size: 18px;
-    line-height: 24.5px;
-    font-weight: 700;
+    color: @midnight;
+    font-size: @fontSizeBig;
+    line-height: @lineHeightSmall;
+    font-weight: @fontWeightBold;
   }
+
   &__phone-number,
   &__email,
   &__description {
-    color: #D22856;
-    font-size: 24px;
-    line-height: 33px;
-    font-weight: 300;
+    color: @pink;
+    font-size: @fontSizeHuge;
+    line-height: @lineHeightHuge;
+    font-weight: @fontWeightLight;
   }
+
   &__phone-number,
   &__email {
     text-decoration: none;

@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="header">
@@ -14,16 +15,16 @@
         <div class="menu__wrapper">
           <ul class="menu__list">
             <li class="menu__item">
-              <a href="index.html">Главная</a>
+              <a class="menu__item-link" href="index.html">Главная</a>
             </li>
             <li class="menu__item">
-              <a href="catalog.html">Фотографии</a>
+              <a class="menu__item-link" href="catalog.html">Фотографии</a>
             </li>
             <li class="menu__item menu__item--active">
-              <a href="form.html">Конкурс</a>
+              <a class="menu__item-link" href="form.html">Конкурс</a>
             </li>
             <li class="menu__item">
-              <a href="#">HTML Academy</a>
+              <a class="menu__item-link" href="#">HTML Academy</a>
             </li>
           </ul>
         </div>
@@ -34,10 +35,10 @@
 
       <h1 class="visually-hidden">HTML Academy Pink</h1>
 
-      <section class="intro">
-        <div class="intro__wrapper">
+      <section class="contest">
+        <div class="contest__wrapper">
           <h2 class="visually-hidden">Конкурс</h2>
-          <p class="intro__slogan">
+          <p class="contest__slogan">
             Конурс на самое безбашенное путешествие с Пинк
           </p>
         </div>
@@ -53,22 +54,22 @@
           </p>
           <form class="form__fill-in" action="https://echo.htmlacademy.ru" method="post">
             <p class="form__item">
-              <label for="surname">
+              <label class="form__label" for="surname">
                 Фамилия:
               </label>
-              <input class="form__surname" type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required>
+              <input class="form__surname form__input" type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required>
             </p>
             <p class="form__item">
-              <label for="name">
+              <label class="form__label" for="name">
                 Имя:
               </label>
-              <input class="form__name" type="text" id="name" name="name" placeholder="Введите ваше имя *" required>
+              <input class="form__name form__input" type="text" id="name" name="name" placeholder="Введите ваше имя *" required>
             </p>
             <p class="form__item">
-              <label for="middle-name">
+              <label class="form__label" for="middle-name">
                 Отчество:
               </label>
-              <input class="form__middle-name" type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
+              <input class="form__middle-name form__input" type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
             </p>
 
             <fieldset class="form__checkbox">
@@ -103,16 +104,16 @@
             </fieldset>
 
             <p class="form__item">
-              <label for="phone-number">
+              <label class="form__label" for="phone-number">
                 Номер телефона
               </label>
-              <input class="form__phone-number" type="text" id="phone-number" name="phone-number" placeholder="Номер, пожалуйста">
+              <input class="form__phone-number form__input" type="text" id="phone-number" name="phone-number" placeholder="Номер, пожалуйста">
             </p>
             <p class="form__item">
-              <label for="email">
+              <label class="form__label" for="email">
                 Адрес почты
               </label>
-              <input class="form__email" type="text" id="email" name="email" placeholder="Введите почту *" required>
+              <input class="form__email form__input" type="text" id="email" name="email" placeholder="Введите почту *" required>
             </p>
 
             <fieldset class="form__radio">
@@ -132,7 +133,7 @@
             </fieldset>
 
             <p class="form__item">
-              <label for="message">Текст письма:</label>
+              <label class="form__message-title" for="message">Опишите свои эмоции</label>
               <textarea class="form__message" id="message" name="message" rows="5" placeholder="Можно прям в красках, не стесняйтесь в выражениях"></textarea>
             </p>
             <button class="form__toggle" type="submit">Отправить форму</button>

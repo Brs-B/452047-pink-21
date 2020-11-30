@@ -1,16 +1,20 @@
+@import "../variables.less";
+
 .reviews {
-  background-color: white;
+  background-color: @white;
+
   &__author-name {
-    color: black;
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: 700;
+    color: @black;
+    font-size: @fontSizeBig;
+    line-height: @lineHeightAverage;
+    font-weight: @fontWeightBold;
     font-style: normal;
   }
+
   &__text {
-    color: #283645;
-    font-size: 14px;
-    line-height: 30px;
-    font-weight: 400;
+    color: @midnight;
+    font-size: @fontSizeSmall;
+    line-height: @lineHeightAverage;
+    font-weight: @fontWeightNormal;
   }
 }

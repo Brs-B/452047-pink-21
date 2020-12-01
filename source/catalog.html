@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="header">
@@ -14,16 +15,16 @@
         <div class="menu__wrapper">
           <ul class="menu__list">
             <li class="menu__item">
-              <a href="index.html">Главная</a>
+              <a class="menu__item-link" href="index.html">Главная</a>
             </li>
             <li class="menu__item menu__item--active">
-              <a href="catalog.html">Фотографии</a>
+              <a class="menu__item-link" href="catalog.html">Фотографии</a>
             </li>
             <li class="menu__item">
-              <a href="form.html">Конкурс</a>
+              <a class="menu__item-link" href="form.html">Конкурс</a>
             </li>
             <li class="menu__item">
-              <a href="#">HTML Academy</a>
+              <a class="menu__item-link" href="#">HTML Academy</a>
             </li>
           </ul>
         </div>
@@ -34,10 +35,10 @@
 
       <h1 class="visually-hidden">HTML Academy Pink</h1>
 
-      <section class="intro">
-        <div class="intro__wrapper">
-          <h2 class="visually-hidden">Каталог</h2>
-          <p class="intro__title">
+      <section class="photo">
+        <div class="photo__wrapper">
+          <h2 class="visually-hidden">Каталог-фото</h2>
+          <p class="photo__title">
             Фотографии пользователей!
           </p>
         </div>
@@ -185,8 +186,8 @@
             Выкладывайте все, что накопилось в
             телефоне!
           </h2>
-          <img src="https://via.placeholder.com/280x374" width="280" height="374" alt="Загрузить-фото">
           <div class="upload__filters filters">
+            <img src="https://via.placeholder.com/280x374" width="280" height="374" alt="Загрузить-фото">
             <ul class="filters__list">
               <li class="filters__item filters__item--active">
                 <a class="filters__crop" href="#">
@@ -205,8 +206,8 @@
               </li>
             </ul>
             <div class="upload__toggles">
-              <button class="upload__toggle" type="button">Запостить</button>
-              <button class="upload__toggle" type="button" disabled>Отмена</button>
+              <button class="upload__toggle-upload" type="button">Запостить</button>
+              <button class="upload__toggle-cancel" type="button" disabled>Отмена</button>
             </div>
           </div>
         </div>

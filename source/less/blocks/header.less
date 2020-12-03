@@ -3,4 +3,18 @@
 .header {
   color: @white;
   background-color: @midnight;
+
+  @media (min-width: @desktopWidth) {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  &__logo {
+    height: 66px;
+
+    @media (min-width: @tabletWidth) {
+      height: 110px;
+    }
+  }
 }

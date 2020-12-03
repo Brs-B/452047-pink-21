@@ -9,10 +9,34 @@
     font-size: @fontSizeHuge;
     line-height: @lineHeightNormal;
     font-weight: @fontWeightLight;
+    text-align: center;
+  }
+
+  @media (min-width: @tabletWidth) {
+    &__purpose {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &__phones {
+        order: -1;
+      }
+    }
   }
 
   &__list {
     list-style: none;
+  }
+
+  @media (min-width: @desktopWidth) {
+    &__list {
+      display: flex;
+    }
+
+    &__phones {
+      order: -1;
+      display: flex;
+    }
   }
 
   &__title {
@@ -27,5 +51,13 @@
     font-size: @fontSizeSmall;
     line-height: @lineHeightMoreSmall;
     font-weight: @fontWeightNormal;
+  }
+
+  &__phones {
+    display: hidden;
+  }
+
+  &__phone--mobile {
+    display: visible;
   }
 }

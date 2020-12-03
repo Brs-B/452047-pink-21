@@ -4,6 +4,17 @@
   background-color: @midnightBackground;
   color: @white;
 
+  @media (min-width: @tabletWidth) {
+    &__wrapper {
+      width: 620px;
+    }
+  }
+
+  &__header {
+    background-image: url("../../img/back-mobile.jpg");
+    background-repeat: no-repeat;
+  }
+
   &__slogan {
     font-size: @fontSizeHuge;
     line-height: @lineHeightNormal;
@@ -19,10 +30,19 @@
   }
 
   &__list {
+    width: 280px;
+    margin: 0;
+    padding: 0;
     list-style: none;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   &__description {
+    text-align: center;
     font-size: @fontSizeSmall;
     line-height: @lineHeightMoreSmall;
     font-weight: @fontWeightLight;

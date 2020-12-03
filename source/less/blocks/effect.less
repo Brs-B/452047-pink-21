@@ -1,0 +1,28 @@
+.effect {
+  display: hidden;
+
+  @media (min-width: @tabletWidth) {
+    display: visible;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__title {
+      color: @black;
+    }
+
+    &__description {
+      color: @midnight;
+      font-size: @fontSizeSmall;
+      line-height: @lineHeightMoreSmall;
+      font-weight: @fontWeightNormal;
+    }
+
+    &__link {
+      color: @pink;
+      text-decoration: underline;
+    }
+  }
+}

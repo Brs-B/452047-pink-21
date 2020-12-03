@@ -3,10 +3,23 @@
 .footer {
   background-color: @white;
 
+  @media (min-width: @tabletWidth) {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
   .socials {
     &__list {
       list-style: none;
+      display: flex;
+      gap: 14px;
     }
+  }
+
+  &__copyright {
+    display: flex;
   }
 
   .copyright {

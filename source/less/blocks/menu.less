@@ -12,4 +12,27 @@
     font-weight: @fontWeightBold;
     text-decoration: none;
   }
+
+  @media (min-width: @desktopWidth) {
+    &__toggle {
+      display: none;
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 940px;
+      margin: 0 auto;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 78px;
+      flex-grow: 1;
+      margin: 0;
+      padding: 0;
+    }
+  }
 }

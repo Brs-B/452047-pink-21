@@ -2,11 +2,36 @@
 
 .footer {
   background-color: @white;
+  margin: 0 auto;
+  width: 320px;
 
   @media (min-width: @tabletWidth) {
-    &__wrapper {
+    width: 660px;
+  }
+
+  @media (min-width: @desktopWidth) {
+    width: 960px;
+  }
+
+  &__wrapper {
+    width: 280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: @tabletWidth) {
+      width: 620px;
       display: flex;
-      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    @media (min-width: @desktopWidth) {
+      width: 940px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
     }
   }
 

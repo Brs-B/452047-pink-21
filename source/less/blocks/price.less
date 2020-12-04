@@ -1,37 +1,84 @@
 @import "../variables.less";
 
 .price {
+  width: 320px;
+  margin: 0 auto;
   background-color: @greyBackground;
 
-  .table {
-    &__offers {
-      background-color: @midnight;
+  @media (min-width: @tabletWidth) {
+    width: 620px;
+  }
 
-      &-none {
-        background-color: @greyBackground;
-      }
+  @media (min-width: @desktopWidth) {
+    width: 940px;
+  }
 
-      &-title {
-        color: @white;
-        font-size: @fontSizeMedium;
-        line-height: @lineHeightAverage;
-        font-weight: @fontWeightLight;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-        h3 {
-          font-weight: @fontWeightBold;
-        }
-      }
+  &__table {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__rows {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__blank {
+    display: none;
+
+    @media (min-width: @tabletWidth) {
+      display: block;
+      width: 153px;
+    }
+  }
+
+  &__title,
+  &__box {
+    width: 280px;
+
+    @media (min-width: @tabletWidth) {
+      display: block;
+      width: 153px;
     }
 
-    &__description {
-      background-color: @white;
+    @media (min-width: @desktopWidth) {
+      display: block;
+      width: 233px;
+    }
+  }
 
-      &-title {
-        color: @midnight;
-        font-size: @fontSizeSmall;
-        line-height: @lineHeightAverage;
-        font-weight: @fontWeightBold;
-      }
+  &__box--first {
+    display: none;
+
+    @media (min-width: @tabletWidth) {
+      display: block;
+      width: 153px;
+    }
+
+    @media (min-width: @desktopWidth) {
+      display: block;
+      width: 233px;
+    }
+  }
+
+  &__toggles {
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: @tabletWidth) {
+      display: none;
     }
   }
 }

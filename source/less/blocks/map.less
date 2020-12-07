@@ -1,0 +1,36 @@
+@import "../variables.less";
+
+.map {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+
+  &-tablet,
+  &-desktop {
+    display: none;
+  }
+
+  @media (min-width: @tabletWidth) {
+    min-width: 660px;
+
+    &-mobile {
+      display: none;
+    }
+
+    &-tablet {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktopWidth) {
+    min-width: 940px;
+
+    &-tablet {
+      display: none;
+    }
+
+    &-desktop {
+      display: block;
+    }
+  }
+}

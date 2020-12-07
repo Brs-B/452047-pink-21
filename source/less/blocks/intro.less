@@ -3,28 +3,148 @@
 .intro {
   background-color: @midnightBackground;
   color: @white;
+  margin: 0 auto;
+  min-width: 320px;
+  width: 100%;
+
+  @media (min-width: @tabletWidth) {
+    min-width: 660px;
+    width: 100%;
+    margin: 0 auto;
+    background-image: url("../../img/back-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-width: @desktopWidth) {
+    min-width: 100%;
+    background-image: url("../../img/back-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__wrapper {
+    min-width: 320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tabletWidth) {
+      min-width: 620px;
+      justify-content: flex-start;
+    }
+
+    @media (min-width: @desktopWidth) {
+      min-width: 100%;
+    }
+  }
+
+  &__header {
+    background-image: url("../../img/back-mobile.jpg");
+    background-repeat: no-repeat;
+
+    @media (min-width: @tabletWidth) {
+      background-image: none;
+    }
+
+    img {
+      margin: 0;
+    }
+  }
 
   &__slogan {
+    width: 280px;
+    text-align: center;
+    margin: 0 auto;
     font-size: @fontSizeHuge;
     line-height: @lineHeightNormal;
     font-weight: @fontWeightLight;
   }
 
   &__link {
+    width: 280px;
+    margin: 0 auto;
+    padding: 0;
     font-size: @fontSizeBig;
     line-height: @lineHeightTiny;
     font-weight: @fontWeightBold;
     color: @white;
+    text-align: center;
+    align-items: center;
     text-decoration: none;
+    display: block;
   }
 
   &__list {
+    width: 280px;
+    margin: 0 auto;
+    padding: 0;
     list-style: none;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
   }
 
   &__description {
+    margin: 0;
+    text-align: center;
     font-size: @fontSizeSmall;
     line-height: @lineHeightMoreSmall;
     font-weight: @fontWeightLight;
+  }
+
+  &__hand-phone {
+    display: none;
+  }
+}
+
+@media (min-width: @tabletWidth) {
+  .intro {
+
+    margin: 0;
+    padding: 0;
+
+    &__wrapper {
+      width: 620px;
+      height: 620px;
+    }
+
+    &__header {
+      background-image: none;
+      padding-top: 100px;
+    }
+
+    &__slogan {
+      width: 300px;
+      align-self: start;
+      margin: 0;
+      z-index: 1;
+    }
+
+    &__header img {
+      display: none;
+    }
+
+    &__link {
+      align-self: start;
+      margin: 0;
+    }
+
+    &__list {
+      width: 300px;
+      align-self: start;
+      margin: 0;
+      z-index: 1;
+    }
+
+    &__description {
+      width: 300px;
+      align-self: start;
+      margin: 0;
+      z-index: 1;
+    }
   }
 }

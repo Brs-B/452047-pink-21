@@ -1,6 +1,19 @@
 @import "../variables.less";
 
 .menu {
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tabletWidth) {
+    min-width: 660px;
+  }
+
+  @media (min-width: @desktopWidth) {
+    min-width: auto;
+    margin: 0 auto;
+  }
+
   &__list {
     list-style: none;
   }
@@ -11,5 +24,28 @@
     line-height: @lineHeightBig;
     font-weight: @fontWeightBold;
     text-decoration: none;
+  }
+
+  @media (min-width: @desktopWidth) {
+    &__toggle {
+      display: none;
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 940px;
+      margin: 0 auto;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 78px;
+      flex-grow: 1;
+      margin: 0;
+      padding: 0;
+    }
   }
 }

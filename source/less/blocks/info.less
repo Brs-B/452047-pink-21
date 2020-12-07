@@ -2,20 +2,79 @@
 
 .info {
   background-color: @greyBackground;
+  margin: 0 auto;
+  min-width: 320px;
+  width: 100%;
+
+  @media (min-width: @tabletWidth) {
+    min-width: 660px;
+  }
+
+  @media (min-width: @desktopWidth) {
+    min-width: 960px;
+  }
 
   &__offer {
+    min-width: 210px;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 55px;
+    flex-direction: column;
+    justify-content: flex-start;
     background-color: @white;
     color: @midnight;
     font-size: @fontSizeHuge;
     line-height: @lineHeightNormal;
     font-weight: @fontWeightLight;
+    text-align: center;
+
+    @media (min-width: @tabletWidth) {
+      min-width: 590px;
+      padding: 0 35px;
+    }
+
+    @media (min-width: @desktopWidth) {
+      width: auto;
+      padding: 0;
+    }
+  }
+
+  &__answer {
+    @media (min-width: @tabletWidth) {
+      padding: 0 150px;
+    }
+
+    @media (min-width: @desktopWidth) {
+      width: 280px;
+      margin: 0 auto;
+    }
   }
 
   &__list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    @media (min-width: @tabletWidth) {
+      min-width: 310px;
+      text-align: left;
+    }
+
+    @media (min-width: @desktopWidth) {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__title {
+    min-width: 280px;
+    margin: 0 auto;
     color: @black;
     font-size: @fontSizeBig;
     line-height: @lineHeightMoreSmall;
@@ -23,9 +82,57 @@
   }
 
   &__description {
+    min-width: 280px;
+    margin: 0 auto;
     color: @midnight;
     font-size: @fontSizeSmall;
     line-height: @lineHeightMoreSmall;
     font-weight: @fontWeightNormal;
+  }
+
+  &__phone {
+    display: none;
+  }
+
+  &__phone--mobile {
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @tabletWidth) {
+    &__purpose {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__phones {
+      order: -1;
+    }
+
+    &__phone--mobile {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  @media (min-width: @desktopWidth) {
+    &__purpose {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__list {
+      display: flex;
+    }
+
+    &__phones {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    &__phone {
+      display: block;
+    }
   }
 }

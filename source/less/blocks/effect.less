@@ -2,17 +2,18 @@
   display: none;
   margin: 0 auto;
   padding: 0;
+  width: 100%;
 
   @media (min-width: @tabletWidth) {
     display: block;
     background-color: @greyBackground;
-    width: 660px;
+    min-width: 660px;
   }
 
   @media (min-width: @desktopWidth) {
     display: block;
     background-color: @greyBackground;
-    width: 940px;
+    width: 100%;
   }
 
   &__wrapper {

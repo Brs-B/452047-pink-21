@@ -3,21 +3,39 @@
 .reviews {
   background-color: @white;
   margin: 0 auto;
-  width: 320px;
+  min-width: 320px;
+  width: 100%;
 
   @media (min-width: @tabletWidth) {
-    width: 620px;
+    min-width: 660px;
   }
 
   @media (min-width: @desktopWidth) {
-    width: 940px;
+    min-width: 960px;
   }
 
   &__list {
     display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &__author-info {
+    min-width: 280px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
   }
 
   &__author-name {
+    width: 160px;
+    text-align: center;
     color: @black;
     font-size: @fontSizeBig;
     line-height: @lineHeightAverage;
@@ -57,6 +75,7 @@
     &__author-info {
       display: flex;
       flex-direction: column;
+      margin: 0 auto;
     }
 
     &__author-name {

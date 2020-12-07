@@ -1,14 +1,8 @@
 @import "../variables.less";
 
 .page {
-  padding: 0;
-  margin: 0;
-
   &__body {
     font-family: "Open Sans", "Arial", sans-serif;
-    font-size: @fontSizeMedium;
-    line-height: @lineHeightMoreSmall;
-    font-weight: @fontWeightLight;
     text-transform: none;
     color: @black;
     background-color: @white;
@@ -17,7 +11,17 @@
     align-content: start;
     min-height: 100%;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 320px;
     box-sizing: border-box;
+
+    @media (min-width: @tabletWidth) {
+      min-width: 660px;
+    }
+
+    @media (min-width: @desktopWidth) {
+      min-width: 960px;
+    }
   }
 }

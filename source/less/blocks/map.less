@@ -5,11 +5,32 @@
   margin: 0 auto;
   padding: 0;
 
+  &-tablet,
+  &-desktop {
+    display: none;
+  }
+
   @media (min-width: @tabletWidth) {
-    width: 660px;
+    min-width: 660px;
+
+    &-mobile {
+      display: none;
+    }
+
+    &-tablet {
+      display: block;
+    }
   }
 
   @media (min-width: @desktopWidth) {
-    width: 940px;
+    min-width: 940px;
+
+    &-tablet {
+      display: none;
+    }
+
+    &-desktop {
+      display: block;
+    }
   }
 }

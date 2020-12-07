@@ -1,6 +1,19 @@
 @import "../variables.less";
 
 .menu {
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tabletWidth) {
+    min-width: 660px;
+  }
+
+  @media (min-width: @desktopWidth) {
+    min-width: auto;
+    margin: 0 auto;
+  }
+
   &__list {
     list-style: none;
   }

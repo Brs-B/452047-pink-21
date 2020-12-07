@@ -3,24 +3,68 @@
 .header {
   color: @white;
   background-color: @midnight;
-  width: 320px;
+  width: 100%;
+  min-width: 320px;
   margin: 0 auto;
+  padding: 0;
 
   @media (min-width: @tabletWidth) {
-    width: 620px;
+    min-width: 660px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktopWidth) {
+    min-width: 960px;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    width: 940px;
+
+    @media (min-width: @desktopWidth) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   &__logo {
-    height: 66px;
+    height: 23px;
 
     @media (min-width: @tabletWidth) {
-      height: 110px;
+      height: 40px;
+    }
+
+    &--mobile {
+      display: block;
+
+      @media (min-width: @tabletWidth) {
+        display: none;
+      }
+    }
+
+    &--tablet {
+      display: none;
+
+      @media (min-width: @tabletWidth) {
+        display: block;
+      }
+
+      @media (min-width: @desktopWidth) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @media (min-width: @desktopWidth) {
+        display: block;
+      }
     }
   }
 }

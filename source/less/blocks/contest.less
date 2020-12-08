@@ -1,10 +1,42 @@
 @import "../variables.less";
 
 .contest {
+  width: 100%;
+  min-width: 320px;
+  height: 125px;
+  margin: 0 auto;
+  padding: 0;
+  background-image: url("../../img/back-mobile.jpg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tabletWidth) {
+    min-width: 620px;
+    height: 330px;
+    background-image: url("../../img/back-tablet.jpg");
+  }
+
+  @media (min-width: @desktopWidth) {
+    min-width: 940px;
+    height: 285px;
+    background-image: url("../../img/back-desktop.jpg");
+  }
+
   &__slogan {
+    min-width: 230px;
+    margin: 0 auto;
+    padding-top: 20px;
     color: @white;
     font-size: @fontSizeHuge;
     line-height: @lineHeightHuge;
     font-weight: @fontWeightLight;
+    text-align: center;
+
+    @media (min-width: @tabletWidth) {
+      padding-top: 80px;
+    }
+
+    @media (min-width: @tabletWidth) {
+      padding-top: 74px;
+    }
   }
 }

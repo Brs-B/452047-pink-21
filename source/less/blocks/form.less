@@ -2,12 +2,54 @@
 
 .form {
   background-color: @white;
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0;
 
   &__condition {
+    min-width: 280px;
+    margin: 0 auto;
     color: @midnight;
     font-size: @fontSizeSmall;
     line-height: @lineHeightAverage;
     font-weight: @fontWeightNormal;
+    text-align: center;
+  }
+
+  &__fill-in {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @desktopWidth) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__initial {
+    border: none;
+    margin: 0;
+    padding-bottom: 20px;
+
+    @media (min-width: @tabletWidth) {
+      width: 620px;
+    }
+
+    @media (min-width: @desktopWidth) {
+      width: 430px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tabletWidth) {
+      display: flex;
+      flex-direction: row;
+    }
   }
 
   &__label {
@@ -15,6 +57,10 @@
     font-size: @fontSizeSmall;
     line-height: @lineHeightAverage;
     font-weight: @fontWeightNormal;
+
+    @media (min-width: @tabletWidth) {
+      padding-right: 20px;
+    }
   }
 
   &__input,
@@ -25,6 +71,16 @@
     font-weight: @fontWeightNormal;
   }
 
+  &__input {
+    @media (min-width: @tabletWidth) {
+      min-width: 520px;
+    }
+
+    @media (min-width: @desktopWidth) {
+      min-width: 340px;
+    }
+  }
+
   &__checkbox-title,
   &__radio-title,
   &__message-title {
@@ -32,5 +88,94 @@
     font-size: @fontSizeSmall;
     line-height: @lineHeightTiny;
     font-weight: @fontWeightNormal;
+    text-align: center;
+  }
+
+  &__checkbox {
+    border: none;
+    margin: 0;
+    padding-bottom: 20px;
+    background-color: @greyBackground;
+
+    @media (min-width: @tabletWidth) {
+      border: 2px solid @grey;
+      order: 4;
+      background-color: @white;
+    }
+
+    @media (min-width: @desktopWidth) {
+      width: 100%;
+    }
+  }
+
+  &__checkbox-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @desktopWidth) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  }
+
+  &__address {
+    border: none;
+    margin: 0;
+    padding-bottom: 20px;
+
+    @media (min-width: @tabletWidth) {
+      border: 2px solid @grey;
+      order: 3;
+    }
+
+    @media (min-width: @desktopWidth) {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__radio {
+    border: none;
+    margin: 0;
+    padding-bottom: 20px;
+    background-color: @greyBackground;
+
+    @media (min-width: @tabletWidth) {
+      border: 2px solid @grey;
+      order: 2;
+      background-color: @white;
+    }
+  }
+
+  &__text-us {
+    border: none;
+    margin: 0;
+
+    @media (min-width: @tabletWidth) {
+      border: 2px solid @grey;
+      order: 5;
+    }
+
+    @media (min-width: @tabletWidth) {
+      width: 100%;
+    }
+  }
+
+  &__item-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__panel {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tabletWidth) {
+      order: 6;
+      display: flex;
+      flex-direction: row;
+    }
   }
 }

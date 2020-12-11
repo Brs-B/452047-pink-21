@@ -1,15 +1,90 @@
 @import "../variables.less";
 
 .catalog {
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: @tabletWidth) {
+    min-width: 620px;
+  }
+
+  @media (min-width: @desktopWidth) {
+    min-width: 940px;
+  }
+
   &__description {
     color: @midnight;
     font-size: @fontSizeSmall;
     line-height: @lineHeightAverage;
     font-weight: @fontWeightNormal;
+    text-align: center;
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tabletWidth) {
+      min-width: 620px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: @desktopWidth) {
+      width: 940px;
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    margin: 0 auto;
+
+    @media (min-width: @tabletWidth) {
+      width: 300px;
+    }
+  }
+
+  &__item--image-day {
+    @media (min-width: @tabletWidth) {
+      width: 620px;
+    }
+
+    @media (min-width: @desktopWidth) {
+      width: 940px;
+    }
+  }
+
+  &__item--image-day &__author-info {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media (min-width: @tabletWidth) {
+      width: 620px;
+    }
+  }
+
+  &__item--image-day &__like {
+    @media (min-width: @tabletWidth) {
+      order: 1;
+    }
   }
 
   &__author-info {
     background-color: @greyBackground;
+    width: 280px;
+    margin: 0;
+
+    @media (min-width: @desktopWidth) {
+      width: 300px;
+    }
   }
 
   &__author-name {
@@ -26,6 +101,7 @@
     line-height: @lineHeightMoreSmall;
     font-weight: @fontWeightLight;
     font-style: normal;
+    text-transform: uppercase;
   }
 
   &__text {
@@ -35,10 +111,24 @@
     font-weight: @fontWeightNormal;
   }
 
+  &__like {
+    display: flex;
+    flex-direction: row;
+
+    @media (min-width: @tabletWidth) {
+      width: 240px;
+      justify-content: space-between;
+    }
+  }
+
   &__likes-number {
     color: @pink;
     font-size: @fontSizeTiny;
     line-height: @lineHeightMoreSmall;
     font-weight: @fontWeightNormal;
+
+    @media (min-width: @tabletWidth) {
+      order: -1;
+    }
   }
 }

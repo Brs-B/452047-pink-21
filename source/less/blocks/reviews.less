@@ -5,9 +5,11 @@
   margin: 0 auto;
   min-width: 320px;
   width: 100%;
+  padding-top: 50px;
 
   @media (min-width: @tabletWidth) {
     min-width: 660px;
+    padding-top: 109px;
   }
 
   @media (min-width: @desktopWidth) {
@@ -59,6 +61,13 @@
     font-size: @fontSizeSmall;
     line-height: @lineHeightAverage;
     font-weight: @fontWeightNormal;
+    text-align: center;
+    margin: 0;
+    width: 280px;
+
+    @media (min-width: @tabletWidth) {
+      width: 620px;
+    }
   }
 
   &__prev,
@@ -79,6 +88,7 @@
     }
 
     &__author-name {
+      width: 175px;
       order: 2;
       align-self: center;
 
@@ -96,11 +106,23 @@
     &__prev {
       display: block;
       order: -1;
+      border: none;
+      width: 22px;
+      height: 41px;
+      background-color: transparent;
+      position: relative;
+      top: 40px;
     }
 
     &__next {
       display: block;
       order: 1;
+      border: none;
+      width: 22px;
+      height: 41px;
+      background-color: transparent;
+      position: relative;
+      top: 40px;
     }
 
     &__toggles {

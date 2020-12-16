@@ -1,39 +1,53 @@
 .effect {
   display: none;
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
 
   @media (min-width: @tabletWidth) {
     display: block;
-    background-color: @greyBackground;
+    background-color: @white;
     min-width: 660px;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 54px;
+    width: 100%;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    &__fact {
+      padding-top: 48px;
+    }
+
+    &__title {
+      color: @black;
+      margin: 0;
+      padding-bottom: 10px;
+    }
+
+    &__description {
+      width: 310px;
+      color: @midnight;
+      font-size: @fontSizeSmall;
+      line-height: @lineHeightMoreSmall;
+      font-weight: @fontWeightNormal;
+    }
+
+    &__link {
+      color: @pink;
+      text-decoration: underline;
+    }
   }
 
   @media (min-width: @desktopWidth) {
     display: block;
     background-color: @greyBackground;
     width: 100%;
-  }
+    padding-bottom: 67px;
 
-  &__wrapper {
-    display: flex;
-    flex-direction: row;
-  }
-
-  &__title {
-    color: @black;
-  }
-
-  &__description {
-    color: @midnight;
-    font-size: @fontSizeSmall;
-    line-height: @lineHeightMoreSmall;
-    font-weight: @fontWeightNormal;
-  }
-
-  &__link {
-    color: @pink;
-    text-decoration: underline;
+    &__description {
+      width: 534px;
+    }
   }
 }

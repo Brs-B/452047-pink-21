@@ -11,16 +11,18 @@
     min-width: 660px;
     width: 100%;
     margin: 0 auto;
-    background-image: url("../../img/back-tablet.jpg");
+    height: 620px;
+    background-image: url("../../img/hand-phone-tablet.png"), url("../../img/back-tablet.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right bottom, center;
   }
 
   @media (min-width: @desktopWidth) {
     min-width: 100%;
-    background-image: url("../../img/back-desktop.jpg");
+    height: 743px;
+    background-image: url("../../img/hand-phone-desktop.png"), url("../../img/back-desktop.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right bottom, center;
   }
 
   &__wrapper {
@@ -40,11 +42,20 @@
   }
 
   &__header {
-    background-image: url("../../img/back-mobile.jpg");
+    margin: 0 auto;
+    background-image: url("../../img/hand-phone-mobile.png"), url("../../img/back-mobile.jpg");
     background-repeat: no-repeat;
+    background-size: auto, auto;
+    background-position: bottom left, bottom center;
+    min-height: 396px;
 
     @media (min-width: @tabletWidth) {
       background-image: none;
+      margin: 0;
+    }
+
+    @media (min-width: @desktopWidth) {
+      padding: 0 64px;
     }
 
     img {
@@ -54,17 +65,43 @@
 
   &__slogan {
     width: 280px;
+    padding-top: 29px;
     text-align: center;
     margin: 0 auto;
     font-size: @fontSizeHuge;
     line-height: @lineHeightNormal;
     font-weight: @fontWeightLight;
+
+    @media (min-width: @tabletWidth) {
+      width: 300px;
+    }
+  }
+
+  &__footer {
+    padding-top: 28px;
+    padding-bottom: 38px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @media (min-width: @tabletWidth) {
+      position: relative;
+      top: -220px;
+      margin: 0;
+      padding-top: 0;
+    }
+
+    @media (min-width: @desktopWidth) {
+      padding: 0 64px;
+    }
   }
 
   &__link {
     width: 280px;
-    margin: 0 auto;
-    padding: 0;
+    margin-bottom: 32px;
+    padding-top: 18px;
+    padding-bottom: 18px;
     font-size: @fontSizeBig;
     line-height: @lineHeightTiny;
     font-weight: @fontWeightBold;
@@ -73,12 +110,21 @@
     align-items: center;
     text-decoration: none;
     display: block;
+    border: 3px solid @white;
+    box-sizing: border-box;
+    border-radius: 29px;
+
+    @media (min-width: @tabletWidth) {
+      width: 300px;
+      margin-bottom: 46px;
+    }
   }
 
   &__list {
     width: 280px;
     margin: 0 auto;
     padding: 0;
+    padding-bottom: 31px;
     list-style: none;
     text-align: center;
     display: flex;
@@ -103,7 +149,6 @@
 
 @media (min-width: @tabletWidth) {
   .intro {
-
     margin: 0;
     padding: 0;
 

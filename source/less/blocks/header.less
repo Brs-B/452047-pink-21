@@ -7,6 +7,7 @@
   min-width: 320px;
   margin: 0 auto;
   padding: 0;
+  display: block;
 
   @media (min-width: @tabletWidth) {
     min-width: 660px;
@@ -18,17 +19,34 @@
     margin: 0 auto;
   }
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    @media (min-width: @desktopWidth) {
+      width: 940px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: auto;
+    }
+  }
+
   &__wrapper {
     margin: 0 auto;
+    padding: 22px 20px 21px 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     @media (min-width: @desktopWidth) {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      width: 150px;
+      margin: 0;
+      padding: 27px 0 44px 0;
     }
   }
 

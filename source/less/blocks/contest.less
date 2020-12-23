@@ -3,11 +3,12 @@
 .contest {
   width: 100%;
   min-width: 320px;
-  height: 125px;
+  height: 171px;
   margin: 0 auto;
   padding: 0;
   background-image: url("../../img/back-mobile.jpg");
   background-repeat: no-repeat;
+  background-position: center;
 
   @media (min-width: @tabletWidth) {
     min-width: 620px;
@@ -22,9 +23,9 @@
   }
 
   &__slogan {
-    min-width: 230px;
+    width: 230px;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 26px;
     color: @white;
     font-size: @fontSizeHuge;
     line-height: @lineHeightHuge;
@@ -32,10 +33,12 @@
     text-align: center;
 
     @media (min-width: @tabletWidth) {
+      width: 600px;
       padding-top: 80px;
     }
 
     @media (min-width: @tabletWidth) {
+      width: 747px;
       padding-top: 74px;
     }
   }

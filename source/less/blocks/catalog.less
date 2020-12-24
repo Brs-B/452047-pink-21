@@ -13,6 +13,12 @@
     min-width: 940px;
   }
 
+  &__wrapper {
+    @media (min-width: @tabletWidth) {
+      padding: 0 20px;
+    }
+  }
+
   &__description {
     color: @midnight;
     font-size: @fontSizeSmall;
@@ -21,6 +27,14 @@
     text-align: center;
     width: 280px;
     margin: 0 auto;
+    padding-top: 54px;
+    margin-bottom: 60px;
+
+    @media (min-width: @tabletWidth) {
+      width: 400px;
+      padding-top: 100px;
+      margin-bottom: 85px;
+    }
   }
 
   &__list {
@@ -30,7 +44,8 @@
     flex-direction: column;
 
     @media (min-width: @tabletWidth) {
-      min-width: 620px;
+      margin: 0 auto;
+      width: 620px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -44,19 +59,63 @@
 
   &__item {
     margin: 0 auto;
+    padding-top: 20px;
 
     @media (min-width: @tabletWidth) {
       width: 300px;
+      margin: 0;
+      padding-top: 50px;
+
+      &:nth-child(2n) {
+        margin-left: 20px;
+      }
+    }
+
+    @media (min-width: @desktopWidth) {
+      &:nth-child(2n) {
+        margin-left: 0;
+      }
+
+      &:nth-child(3n),
+      &:nth-child(3n-1) {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &__image {
+    @media (min-width: @tabletWidth) {
+      width: 300px;
+      height: 300px;
+    }
+
+    @media (min-width: @desktopWidth) {
+      height: 400px;
+    }
+
+    &-day {
+      @media (min-width: @tabletWidth) {
+        width: 660px;
+        height: 509px;
+      }
+
+      @media (min-width: @desktopWidth) {
+        width: 1220px;
+        height: 506px;
+      }
     }
   }
 
   &__item--image-day {
     @media (min-width: @tabletWidth) {
-      width: 620px;
+      width: 660px;
+      margin: 0 auto;
+      padding-top: 0;
     }
 
     @media (min-width: @desktopWidth) {
       width: 940px;
+      margin: 0 auto;
     }
   }
 
@@ -67,32 +126,78 @@
     flex-wrap: wrap;
 
     @media (min-width: @tabletWidth) {
-      width: 620px;
+      width: 590px;
+      padding: 0;
+      padding-top: 23px;
+      padding-left: 30px;
+      padding-bottom: 32px;
+      justify-content: space-between;
+    }
+
+    @media (min-width: @desktopWidth) {
+      width: 910px;
+    }
+  }
+
+  &__item--image-day &__text {
+    @media (min-width: @tabletWidth) {
+      width: 520px;
+      order: 2;
+      height: 45px;
+    }
+
+    @media (min-width: @desktopWidth) {
+      width: 875px;
+      height: 10px;
     }
   }
 
   &__item--image-day &__like {
     @media (min-width: @tabletWidth) {
+      width: 120px;
       order: 1;
+      padding-right: 30px;
+      margin-bottom: 0;
     }
   }
 
   &__author-info {
     background-color: @greyBackground;
-    width: 280px;
-    margin: 0;
+    width: 253px;
+    padding-left: 17px;
+    padding-right: 10px;
+    padding-top: 15px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media (min-width: @tabletWidth) {
+      width: 232px;
+      margin: 0;
+      padding-left: 30px;
+      padding-right: 38px;
+    }
 
     @media (min-width: @desktopWidth) {
-      width: 300px;
+      width: 245px;
+      padding-right: 25px;
     }
   }
 
   &__author-name {
+    font-style: normal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__name {
     color: @midnight;
     font-size: @fontSizeSmall;
     line-height: @lineHeightMoreSmall;
     font-weight: @fontWeightBold;
-    font-style: normal;
+    margin-right: 3px;
   }
 
   &__time {
@@ -105,15 +210,26 @@
   }
 
   &__text {
+    margin: 0;
+    margin-bottom: 20px;
+    width: 260px;
     color: @midnight;
     font-size: @fontSizeSmall;
     line-height: @lineHeightMoreSmall;
     font-weight: @fontWeightNormal;
+
+    @media (min-width: @tabletWidth) {
+      width: 232px;
+      height: 61px;
+      margin-bottom: 0;
+    }
   }
 
   &__like {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    margin-bottom: 26px;
 
     @media (min-width: @tabletWidth) {
       width: 240px;
@@ -126,9 +242,12 @@
     font-size: @fontSizeTiny;
     line-height: @lineHeightMoreSmall;
     font-weight: @fontWeightNormal;
+    text-transform: uppercase;
+    padding-left: 18px;
 
     @media (min-width: @tabletWidth) {
       order: -1;
+      padding-left: 0;
     }
   }
 }

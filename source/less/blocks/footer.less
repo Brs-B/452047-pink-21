@@ -44,6 +44,20 @@
     @media (min-width: @tabletWidth) {
       margin: 0;
     }
+
+    @media (min-width: @desktopWidth) {
+      &--non-desktop {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @media (min-width: @desktopWidth) {
+        display: block;
+      }
+    }
   }
 
   .socials {

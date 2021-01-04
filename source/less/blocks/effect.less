@@ -20,20 +20,41 @@
 
     &__fact {
       padding-top: 48px;
+
+      @media (min-width: @desktopWidth) {
+        padding-top: 98px;
+      }
     }
 
     &__title {
       color: @black;
       margin: 0;
-      padding-bottom: 10px;
+      width: 195px;
+      margin-bottom: 20px;
+      font-size: @fontSizeMega;
+      line-height: @lineHeightMega;
+      font-weight: @fontWeightBold;
+
+      @media (min-width: @desktopWidth) {
+        width: auto;
+        margin-bottom: 37px;
+        line-height: @lineHeightAverage;
+      }
     }
 
     &__description {
-      width: 310px;
+      width: 300px;
       color: @midnight;
       font-size: @fontSizeSmall;
       line-height: @lineHeightMoreSmall;
       font-weight: @fontWeightNormal;
+      margin-bottom: 20px;
+
+      @media (min-width: @desktopWidth) {
+        width: 535px;
+        margin-bottom: 37px;
+        line-height: @lineHeightAverage;
+      }
     }
 
     &__link {
@@ -51,10 +72,6 @@
     &__timer {
       width: 298px;
       height: 345px;
-    }
-
-    &__description {
-      width: 534px;
     }
   }
 }

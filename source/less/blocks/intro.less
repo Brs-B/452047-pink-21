@@ -6,6 +6,7 @@
   margin: 0 auto;
   min-width: 320px;
   width: 100%;
+  height: 667px;
 
   @media (min-width: @tabletWidth) {
     min-width: 660px;
@@ -15,6 +16,11 @@
     background-image: url("../../img/hand-phone-tablet.png"), url("../../img/back-tablet.jpg");
     background-repeat: no-repeat;
     background-position: right bottom, center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/hand-phone-tablet@2x.png"), url("../../img/back-tablet@2x.jpg");
+      background-size: auto 545px, auto 729px;
+    }
   }
 
   @media (min-width: @desktopWidth) {
@@ -23,6 +29,11 @@
     background-image: url("../../img/hand-phone-desktop.png"), url("../../img/back-desktop.jpg");
     background-repeat: no-repeat;
     background-position: right bottom, center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/hand-phone-desktop@2x.png"), url("../../img/back-desktop@2x.jpg");
+      background-size: auto 695px, auto 853px;
+    }
   }
 
   &__wrapper {
@@ -47,7 +58,15 @@
     background-repeat: no-repeat;
     background-size: auto, auto;
     background-position: bottom left, bottom center;
-    min-height: 396px;
+    min-height: 462px;
+    position: relative;
+    top: -66px;
+    z-index: 1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/hand-phone-mobile@2x.png"), url("../../img/back-mobile@2x.jpg");
+      background-size: auto 286px, auto 462px;
+    }
 
     @media (min-width: @tabletWidth) {
       background-image: none;
@@ -65,7 +84,7 @@
 
   &__slogan {
     width: 280px;
-    padding-top: 29px;
+    padding-top: 95px;
     text-align: center;
     margin: 0 auto;
     font-size: @fontSizeHuge;
@@ -84,6 +103,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    position: relative;
+    top: -66px;
 
     @media (min-width: @tabletWidth) {
       position: relative;

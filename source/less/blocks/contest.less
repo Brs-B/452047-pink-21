@@ -3,29 +3,46 @@
 .contest {
   width: 100%;
   min-width: 320px;
-  height: 171px;
+  height: 236px;
   margin: 0 auto;
   padding: 0;
   background-image: url("../../img/back-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  margin-top: -66px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/back-mobile@2x.jpg");
+    background-size: auto 462px;
+  }
 
   @media (min-width: @tabletWidth) {
     min-width: 620px;
-    height: 330px;
+    height: 485px;
+    margin-top: -110px;
     background-image: url("../../img/back-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/back-tablet@2x.jpg");
+      background-size: 765px auto;
+    }
   }
 
   @media (min-width: @desktopWidth) {
     min-width: 940px;
-    height: 285px;
+    height: 394px;
     background-image: url("../../img/back-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/back-desktop@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 
   &__slogan {
     width: 230px;
     margin: 0 auto;
-    padding-top: 26px;
+    padding-top: 92px;
     color: @white;
     font-size: @fontSizeHuge;
     line-height: @lineHeightHuge;
@@ -34,12 +51,17 @@
 
     @media (min-width: @tabletWidth) {
       width: 600px;
-      padding-top: 80px;
+      padding-top: 190px;
+      padding-left: 93px;
+      padding-right: 93px;
     }
 
-    @media (min-width: @tabletWidth) {
+    @media (min-width: @desktopWidth) {
       width: 747px;
-      padding-top: 74px;
+      padding-top: 184px;
+      padding-left: 96px;
+      padding-right: 96px;
+      margin: 0 auto;
     }
   }
 }

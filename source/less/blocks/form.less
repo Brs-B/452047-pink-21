@@ -2,26 +2,19 @@
 
 .form {
   background-color: @white;
-  width: 100%;
-  min-width: 320px;
+  width: 320px;
   margin: 0 auto;
   padding: 0;
   padding-top: 54px;
 
   @media (min-width: @tabletWidth) {
-    min-width: 660px;
+    width: 660px;
     padding-top: 100px;
   }
 
   @media (min-width: @desktopWidth) {
-    min-width: 960px;
+    width: 100%;
   }
-
-  /*&__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-  }*/
 
   &__condition {
     width: 280px;
@@ -48,6 +41,7 @@
     flex-direction: column;
 
     @media (min-width: @desktopWidth) {
+      width: 940px;
       padding-top: 84px;
       display: flex;
       flex-direction: row;
@@ -69,6 +63,8 @@
     @media (min-width: @desktopWidth) {
       width: 430px;
       padding-top: 16px;
+      padding-right: 74px;
+      margin: 0;
 
       .form__item {
         margin-bottom: 58px;
@@ -131,6 +127,10 @@
       padding-right: 20px;
       padding-top: 16px;
     }
+
+    @media (min-width: @desktopWidth) {
+      padding-left: 0;
+    }
   }
 
   &__input,
@@ -153,7 +153,7 @@
     }
 
     @media (min-width: @desktopWidth) {
-      width: 371px;
+      width: 308px;
     }
   }
 
@@ -170,12 +170,14 @@
   }
 
   &__checkbox {
+    width: 280px;
     border: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0 20px;
     background-color: @greyBackground;
 
     @media (min-width: @tabletWidth) {
+      width: 620px;
       border: 2px solid @grey;
       order: 4;
       background-color: @white;
@@ -184,13 +186,14 @@
     }
 
     @media (min-width: @desktopWidth) {
-      width: 100%;
+      width: 900px;
     }
 
     &-title {
+      width: 220px;
       margin: 0;
       margin-bottom: 55px;
-      padding: 0 20px;
+      padding: 0;
 
       @media (min-width: @tabletWidth) {
         margin-bottom: 60px;
@@ -200,6 +203,10 @@
     &-item {
       margin-bottom: 69px;
       position: relative;
+
+      @media (min-width: @desktopWidth) {
+        width: 260px;
+      }
     }
 
     &-item:last-child {
@@ -211,13 +218,6 @@
     }
   }
 
-  &__checkbox-wrapper,
-  &__radio-wrapper {
-    @media (min-width: @tabletWidth) {
-      padding-left: 60px;
-    }
-  }
-
   &__checkbox-wrapper {
     display: flex;
     flex-direction: column;
@@ -226,7 +226,8 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
-      width: 870px;
+      width: 900px;
+      margin: 0 auto;
     }
   }
 
@@ -400,16 +401,23 @@
   }
 
   &__radio {
+    width: 280px;
     border: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0 20px;
     background-color: @greyBackground;
 
     @media (min-width: @tabletWidth) {
+      width: 620px;
       border: 2px solid @grey;
       order: 2;
       background-color: @white;
       margin-bottom: 65px;
+    }
+
+    @media (min-width: @desktopWidth) {
+      width: 390px;
+      margin: 0;
     }
 
     &-item {
@@ -474,12 +482,16 @@
 
     @media (min-width: @tabletWidth) {
       width: 620px;
+      border: 2px solid @grey;
+      border-radius: 3px;
+      order: 6;
+      margin-bottom: 70px;
     }
 
-    @media (min-width: @tabletWidth) {
+    @media (min-width: @desktopWidth) {
       border: 2px solid @grey;
       order: 5;
-      width: 100%;
+      width: 940px;
       margin-bottom: 70px;
     }
   }
@@ -515,7 +527,7 @@
       margin-top: 42px;
     }
 
-    @media (min-width: @tabletWidth) {
+    @media (min-width: @desktopWidth) {
       width: 776px;
     }
   }
@@ -573,10 +585,6 @@
       align-self: center;
     }
 
-    @media (min-width: @desktopWidth) {
-      width: 315px;
-    }
-
     &-star {
       color: @pink;
     }
@@ -585,7 +593,7 @@
       display: none;
 
       @media (min-width: @desktopWidth) {
-        display: block;
+        display: inline;
       }
     }
   }

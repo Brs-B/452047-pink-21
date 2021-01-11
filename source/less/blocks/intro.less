@@ -6,16 +6,16 @@
   margin: 0 auto;
   min-width: 320px;
   width: 100%;
-  height: 667px;
+  height: 733px;
+  margin-top: -66px;
 
   @media (min-width: @tabletWidth) {
-    min-width: 660px;
-    width: 100%;
+    width: 660px;
     margin: 0 auto;
     height: 620px;
     background-image: url("../../img/hand-phone-tablet.png"), url("../../img/back-tablet.jpg");
     background-repeat: no-repeat;
-    background-position: right bottom, center;
+    background-position: bottom, center;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/hand-phone-tablet@2x.png"), url("../../img/back-tablet@2x.jpg");
@@ -24,15 +24,16 @@
   }
 
   @media (min-width: @desktopWidth) {
-    min-width: 100%;
+    min-width: 920px;
+    width: 100%;
     height: 743px;
-    background-image: url("../../img/hand-phone-desktop.png"), url("../../img/back-desktop.jpg");
+    background-image: url("../../img/back-desktop.jpg");
     background-repeat: no-repeat;
-    background-position: right bottom, center;
+    background-position: center;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/hand-phone-desktop@2x.png"), url("../../img/back-desktop@2x.jpg");
-      background-size: auto 695px, auto 853px;
+      background-image: url("../../img/back-desktop@2x.jpg");
+      background-size: auto 743px;
     }
   }
 
@@ -48,6 +49,10 @@
     }
 
     @media (min-width: @desktopWidth) {
+      background-image: url("../../img/hand-phone-desktop.png");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      height: 743px;
       min-width: 100%;
     }
   }
@@ -60,7 +65,6 @@
     background-position: bottom left, bottom center;
     min-height: 462px;
     position: relative;
-    top: -66px;
     z-index: 1;
 
     @media (min-resolution: 2dppx) {
@@ -70,11 +74,14 @@
 
     @media (min-width: @tabletWidth) {
       background-image: none;
+      width: 300px;
       margin: 0;
     }
 
     @media (min-width: @desktopWidth) {
-      padding: 0 64px;
+      padding: 0;
+      padding-right: 620px;
+      margin: 0 auto;
     }
 
     img {
@@ -104,17 +111,19 @@
     flex-direction: column;
     justify-content: flex-start;
     position: relative;
-    top: -66px;
 
     @media (min-width: @tabletWidth) {
       position: relative;
+      width: 300px;
       top: -220px;
       margin: 0;
       padding-top: 0;
     }
 
     @media (min-width: @desktopWidth) {
-      padding: 0 64px;
+      padding: 0;
+      padding-right: 620px;
+      margin: 0 auto;
     }
   }
 
@@ -170,19 +179,6 @@
 
 @media (min-width: @tabletWidth) {
   .intro {
-    margin: 0;
-    padding: 0;
-
-    &__wrapper {
-      width: 620px;
-      height: 620px;
-    }
-
-    &__header {
-      background-image: none;
-      padding-top: 100px;
-    }
-
     &__slogan {
       width: 300px;
       align-self: start;

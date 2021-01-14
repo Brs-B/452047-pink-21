@@ -25,6 +25,9 @@
     background-color: @greyBackground;
     width: 280px;
     margin: 0 auto;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     @media (min-width: @tabletWidth) {
       width: 620px;
@@ -32,11 +35,13 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
+      padding-top: 57px;
       padding-bottom: 54px;
     }
 
     @media (min-width: @desktopWidth) {
-      width: 940px;
+      width: 800px;
+      padding: 57px 60px 57px 79px;
       justify-content: space-around;
     }
   }
@@ -72,6 +77,61 @@
       justify-content: flex-start;
       height: 150px;
       width: 300px;
+    }
+  }
+
+  &__crop,
+  &__fill,
+  &__contrast {
+    border: none;
+    background-color: transparent;
+    outline: none;
+  }
+
+  &__fill,
+  &__contrast {
+    fill: @midnight;
+    opacity: 0.3;
+
+    @media (min-width: @tabletWidth) {
+      fill: @pink;
+      opacity: 1;
+    }
+  }
+
+  &__crop svg {
+    @media (min-width: @tabletWidth) {
+      width: 22px;
+      height: 22px;
+    }
+
+    @media (min-width: @desktopWidth) {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  &__fill svg {
+    @media (min-width: @tabletWidth) {
+      width: 24px;
+      height: 22px;
+    }
+
+    @media (min-width: @desktopWidth) {
+      width: 48px;
+      height: 43px;
+    }
+  }
+
+  &__contrast svg {
+    @media (min-width: @tabletWidth) {
+      width: 16px;
+      height: 16px;
+    }
+
+    @media (min-width: @desktopWidth) {
+      width: 32px;
+      height: 32px;
     }
   }
 

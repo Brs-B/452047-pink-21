@@ -7,7 +7,7 @@ const autoprefixer = require("autoprefixer");
 const imagemin = require("gulp-imagemin");
 const htmlmin = require("gulp-htmlmin")
 const csso = require("postcss-csso");
-const uglify = require("gulp-uglify-es");
+const uglify = require("gulp-uglify-es").default;
 const rename = require("gulp-rename");
 const svgstore = require("gulp-svgstore");
 const webp = require("gulp-webp");
@@ -39,7 +39,7 @@ const copy = () => {
   return gulp.src([
     "source/fonts*.{woff2,woff}",
     "source/*.ico",
-    "source/img/**/*.{jpg,png,svg}"
+    "source/img/*.{jpg,png,svg}"
   ],
     {
       base: "source"
@@ -60,7 +60,7 @@ exports.clean = clean;
 // Images
 
 const images = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  return gulp.src("source/img/*.{jpg,png,svg}")
     .pipe(imagemin( [
       imagemin.mozjpeg({progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
@@ -94,7 +94,7 @@ exports.scripts = scripts;
 // Sprites
 
 const sprite = () => {
-  return gulp.src("sourcr/img/*.svg")
+  return gulp.src("source/img/*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"))
@@ -105,7 +105,7 @@ exports.sprite = sprite;
 // Webp
 
 const createWebp = () => {
-  return gulp.src("sourcr/img/**/*.{jpg,png}")
+  return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"))
 }

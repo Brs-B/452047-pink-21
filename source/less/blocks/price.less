@@ -122,6 +122,53 @@
         border-bottom: 1px solid @midnight;
       }
     }
+
+    &--first::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 74px;
+      height: 74px;
+      background-image: url("../../img/hit-ribbon.svg");
+      background-repeat: no-repeat;
+      top: 0;
+      left: 278px;
+
+      @media (min-width: @tabletWidth) {
+        background-image: url("../../img/hit-ribbon-tablet.svg");
+        width: 61px;
+        height: 61px;
+        left: 310px;
+      }
+
+      @media (min-width: @desktopWidth) {
+        background-image: url("../../img/hit-ribbon.svg");
+        width: 74px;
+        height: 74px;
+        left: 470px;
+      }
+    }
+
+    &--first::after {
+      position: absolute;
+      content: "ХИТ";
+      color: @white;
+      font-size: @fontSizeSmall;
+      line-height: @lineHeightAverage;
+      transform: rotate(-45deg);
+      top: 15px;
+      left: 292px;
+
+      @media (min-width: @tabletWidth) {
+        top: 11px;
+        left: 318px;
+      }
+
+      @media (min-width: @desktopWidth) {
+        top: 13px;
+        left: 485px;
+      }
+    }
   }
 
   &__name {

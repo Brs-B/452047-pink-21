@@ -12,31 +12,43 @@
     z-index: 7;
 
     &__wrapper {
+      width: 620px;
+      padding: 0 20px;
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
+
+      @media (min-width: @desktopWidth) {
+        width: 940px;
+        padding: 0 10px;
+        margin: 0 auto;
+      }
     }
 
     &__fact {
-      padding-top: 48px;
+      padding-top: 44px;
+      padding-right: 10px;
 
       @media (min-width: @desktopWidth) {
         padding-top: 98px;
+        padding-right: 15px;
+        margin-right: 20px;
       }
     }
+
 
     &__title {
       color: @black;
       margin: 0;
+      margin-bottom: 10px;
       width: 195px;
-      margin-bottom: 20px;
       font-size: @fontSizeMega;
       line-height: @lineHeightMega;
       font-weight: @fontWeightBold;
 
       @media (min-width: @desktopWidth) {
         width: auto;
-        margin-bottom: 37px;
+        margin-bottom: 28px;
         line-height: @lineHeightAverage;
       }
     }
@@ -47,11 +59,13 @@
       font-size: @fontSizeSmall;
       line-height: @lineHeightMoreSmall;
       font-weight: @fontWeightNormal;
-      margin-bottom: 20px;
+      margin: 0;
+      margin-bottom: 10px;
 
       @media (min-width: @desktopWidth) {
         width: 535px;
-        margin-bottom: 47px;
+        margin-bottom: 30px;
+        font-size: @fontSizeBig;
         line-height: @lineHeightAverage;
       }
     }
@@ -59,6 +73,14 @@
     &__link {
       color: @pink;
       text-decoration: underline;
+      font-size: @fontSizeSmall;
+      line-height: @lineHeightMoreSmall;
+      font-weight: @fontWeightNormal;
+
+      @media (min-width: @desktopWidth) {
+        font-size: @fontSizeBig;
+        line-height: @lineHeightAverage;
+      }
     }
   }
 
@@ -68,14 +90,11 @@
     width: 100%;
     padding-bottom: 67px;
 
-    &__wrapper {
-      width: 960px;
-      margin: 0 auto;
-    }
-
     &__timer {
       width: 298px;
       height: 345px;
+      position: relative;
+      top: 3px;
     }
   }
 }

@@ -3,7 +3,8 @@
 .photo {
   background-image: url("../../img/back-mobile.jpg");
   background-repeat: no-repeat;
-  height: 236px;
+  background-position: center 0;
+  height: 240px;
   margin: 0 auto;
   padding: 0;
   width: 320px;
@@ -16,14 +17,14 @@
 
   @media (min-width: @tabletWidth) {
     width: 660px;
-    height: 450px;
+    height: 440px;
     background-image: url("../../img/back-tablet.jpg");
     background-position: center 0;
     margin-top: -110px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/back-tablet@2x.jpg");
-      background-size: 765px auto;
+      background-size: auto 729px;
     }
   }
 
@@ -42,7 +43,7 @@
   &__title {
     width: 175px;
     margin: 0;
-    padding-top: 102px;
+    padding-top: 98px;
     padding-left: 74px;
     padding-right: 74px;
     color: @white;
@@ -53,13 +54,15 @@
 
     @media (min-width: @tabletWidth) {
       width: 358px;
-      padding-top: 191px;
+      padding-top: 173px;
       padding-left: 151px;
       padding-right: 151px;
+      font-size: @fontSizeDesktop;
+      line-height: @lineHeightDesktop;
     }
 
     @media (min-width: @desktopWidth) {
-      padding-top: 184px;
+      padding-top: 167px;
       padding-left: 292px;
       padding-right: 292px;
       margin: 0 auto;

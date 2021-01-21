@@ -95,7 +95,7 @@
       </div>
     </header>
 
-    <main>
+    <main class="page-main">
 
       <h1 class="visually-hidden">HTML Academy Pink</h1>
 
@@ -103,7 +103,7 @@
         <div class="photo__wrapper">
           <h2 class="visually-hidden">Каталог-фото</h2>
           <p class="photo__title">
-            Фотографии пользователей!
+            Фотографии пользователей
           </p>
         </div>
       </section>
@@ -133,7 +133,7 @@
               <p class="catalog__text">
                 Прыгать или нет? Напишите в
                 комментарии свой совет и
-                смотрите прямую трансляцию в
+                смотрите&nbsp;прямую трансляцию в
                 перископе, задавайте свои вопросы!
               </p>
               <div class="catalog__like">
@@ -217,7 +217,7 @@
                   <span class="catalog__time">(20 часов назад)</span>
                 </cite>
                 <p class="catalog__text">
-                  Здесь могда быть ваша цитата о высоком и вечном.
+                  Здесь могла быть ваша цитата о высоком и вечном.
                 </p>
                 <div class="catalog__like">
                   <svg width="13" height="12">
@@ -351,9 +351,20 @@
                   </button>
                 </li>
               </ul>
-              <div class="upload__toggles">
-                <button class="upload__toggle-upload" type="button">Запостить</button>
-                <button class="upload__toggle-cancel" type="button" disabled>Отмена</button>
+              <div class="upload__range">
+                <div class="upload__scale upload__scale--crop">
+                  <div class="upload__scale-toggle upload__scale-toggle--crop"></div>
+                </div>
+                <div class="upload__scale upload__scale--fill">
+                  <div class="upload__scale-toggle upload__scale-toggle--fill"></div>
+                </div>
+                <div class="upload__scale upload__scale--contrast">
+                  <div class="upload__scale-toggle upload__scale-toggle--contrast"></div>
+                </div>
+              </div>
+              <div class="upload__buttons">
+                <button class="upload__button-upload" type="button">Запостить</button>
+                <button class="upload__button-cancel" type="button" disabled>Отмена</button>
               </div>
             </div>
           </div>
@@ -361,7 +372,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer footer--catalog">
       <div class="footer__wrapper">
         <div class="footer__logo">
           <svg class="footer__logo--non-desktop" width="145" height="40">

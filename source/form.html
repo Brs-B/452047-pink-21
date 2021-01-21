@@ -101,8 +101,9 @@
           <h2 class="visually-hidden">Форма заполнения</h2>
           <p class="form__condition">
             Поделитесь своей историей и получите
-            шанс выиграть ценный приз - 1000
+            шанс выиграть ценный приз &mdash; 1000
             миль на вашу бонусную карту!
+            <span class="form__condition--add">Пожалуйста, заполните форму ниже:</span>
           </p>
           <form class="form__fill-in" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="form__initial">
@@ -119,7 +120,7 @@
                 <input class="form__name form__input" type="text" id="name" name="name" placeholder="Введите ваше имя *" required>
               </div>
               <div class="form__item">
-                <label class="form__label" for="middle-name">
+                <label class="form__label form__label--middle-name" for="middle-name">
                   Отчество:
                 </label>
                 <input class="form__middle-name form__input" type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
@@ -203,7 +204,7 @@
                 <div class="form__radio-item">
                   <input class="form__radio-input visually-hidden" type="radio" name="android" id="form-android" value="android">
                   <label tabindex="0" class="form__option form__option--radio" for="form-android">
-                    Pink для Android
+                    Pink на Android
                   </label>
                 </div>
                 <div class="form__radio-item">
@@ -219,7 +220,7 @@
               <legend class="form__message-title">
                 Опишите свои эмоции
               </legend>
-              <textarea class="form__message" id="message" name="message" rows="5" placeholder="Можно прям в красках, не стесняйтесь в выражениях"></textarea>
+              <textarea class="form__message" id="message" name="message" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </fieldset>
             <div class="form__panel">
               <button class="form__toggle" type="submit">Отправить форму</button>
@@ -230,7 +231,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer footer--form">
       <div class="footer__wrapper">
         <div class="footer__logo">
           <svg class="footer__logo--non-desktop" width="145" height="40">

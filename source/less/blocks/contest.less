@@ -2,12 +2,12 @@
 
 .contest {
   width: 320px;
-  height: 236px;
+  height: 240px;
   margin: 0 auto;
   padding: 0;
   background-image: url("../../img/back-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 0;
   margin-top: -66px;
 
   @media (min-resolution: 2dppx) {
@@ -16,15 +16,15 @@
   }
 
   @media (min-width: @tabletWidth) {
-    width: 620px;
-    height: 485px;
+    width: 660px;
+    height: 440px;
     margin-top: -110px;
     background-image: url("../../img/back-tablet.jpg");
     background-position: center 0;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/back-tablet@2x.jpg");
-      background-size: 765px auto;
+      background-size: auto 729px;
     }
   }
 
@@ -43,7 +43,7 @@
   &__slogan {
     width: 230px;
     margin: 0 auto;
-    padding-top: 92px;
+    padding-top: 98px;
     color: @white;
     font-size: @fontSizeHuge;
     line-height: @lineHeightHuge;
@@ -52,14 +52,16 @@
 
     @media (min-width: @tabletWidth) {
       width: 480px;
-      padding-top: 190px;
+      padding-top: 179px;
       padding-left: 93px;
       padding-right: 93px;
+      font-size: @fontSizeDesktop;
+      line-height: @lineHeightDesktop;
     }
 
     @media (min-width: @desktopWidth) {
       width: 747px;
-      padding-top: 184px;
+      padding-top: 170px;
       padding-left: 96px;
       padding-right: 96px;
       margin: 0 auto;

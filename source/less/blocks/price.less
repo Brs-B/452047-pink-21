@@ -27,14 +27,14 @@
 
     @media (min-width: @tabletWidth) {
       width: 620px;
-      padding-top: 94px;
+      padding-top: 109px;
       padding-bottom: 70px;
     }
 
     @media (min-width: @desktopWidth) {
       width: 940px;
       margin: 0 auto;
-      padding-top: 149px;
+      padding-top: 160px;
       padding-bottom: 98px;
     }
   }
@@ -254,6 +254,9 @@
 
   &__text {
     width: 150px;
+    text-transform: uppercase;
+    position: relative;
+    right: 5px;
 
     @media (min-width: @tabletWidth) {
       display: none;
@@ -271,6 +274,16 @@
       padding-top: 14px;
       padding-bottom: 14px;
       padding-left: 22px;
+    }
+  }
+
+  &__yes,
+  &__no {
+    position: relative;
+    left: 4px;
+
+    @media (min-width: @tabletWidth) {
+      left: 0;
     }
   }
 }

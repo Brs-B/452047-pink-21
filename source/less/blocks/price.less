@@ -5,6 +5,7 @@
   width: 100%;
   margin: 0 auto;
   background-color: @greyBackground;
+  position: relative;
 
   @media (min-width: @tabletWidth) {
     width: 660px;
@@ -12,6 +13,31 @@
 
   @media (min-width: @desktopWidth) {
     width: 100%;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -153px;
+    left: 0;
+    z-index: 1;
+    width: 320px;
+    height: 200px;
+    overflow: hidden;
+    background-image: url("../../img/white background.svg");
+
+    @media (min-width: @tabletWidth) {
+      width: 660px;
+      top: -140px;
+    }
+
+    @media (min-width: @desktopWidth) {
+      background-position: center 0;
+      background-repeat: no-repeat;
+      width: 100%;
+      top: -16px;
+      left: 0;
+    }
   }
 
   &__wrapper {
@@ -34,7 +60,7 @@
     @media (min-width: @desktopWidth) {
       width: 940px;
       margin: 0 auto;
-      padding-top: 160px;
+      padding-top: 190px;
       padding-bottom: 98px;
     }
   }

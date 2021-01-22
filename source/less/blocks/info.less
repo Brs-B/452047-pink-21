@@ -14,6 +14,22 @@
     width: 100%;
   }
 
+  &::before {
+    @media (min-width: @desktopWidth) {
+      position: absolute;
+      content: "";
+      top: 265px;
+      left: 0;
+      z-index: 4;
+      background-image: url("../../img/white background.svg");
+      background-position: center 0;
+      background-repeat: no-repeat;
+      height: 200px;
+      width: 100%;
+      overflow: visible;
+    }
+  }
+
   &__offer {
     width: 210px;
     display: flex;
@@ -26,12 +42,15 @@
     background-color: @white;
     color: @midnight;
     text-align: center;
+    position: relative;
+    z-index: 1;
 
     @media (min-width: @tabletWidth) {
       width: 590px;
       padding: 0 35px;
-      padding-top: 49px;
+      padding-top: 48px;
       padding-bottom: 25px;
+      z-index: 5;
     }
 
     @media (min-width: @desktopWidth) {
@@ -39,6 +58,7 @@
       padding: 0;
       padding-top: 64px;
       margin: 0 auto;
+      padding-bottom: 25px;
     }
   }
 
@@ -85,6 +105,28 @@
     }
   }
 
+  &__purpose::before {
+    position: absolute;
+    content: "";
+    top: -200px;
+    left: 0;
+    z-index: 1;
+    width: 320px;
+    height: 200px;
+    background-image: url("../../img/grey background.svg");
+
+    @media (min-width: @tabletWidth) {
+      background-image: url("../../img/white background.svg");
+      width: 660px;
+      top: -147px;
+      z-index: 2;
+    }
+
+    @media (min-width: @desktopWidth) {
+      display: none;
+    }
+  }
+
   &__purpose {
     position: relative;
     width: 320px;
@@ -98,6 +140,7 @@
       display: flex;
       flex-direction: row;
       height: 481px;
+      z-index: 3;
     }
 
     @media (min-width: @desktopWidth) {
@@ -105,7 +148,7 @@
       flex-direction: column;
       width: 920px;
       height: 570px;
-      padding-top: 53px;
+      padding-top: 26px;
     }
   }
 
@@ -248,7 +291,7 @@
       flex-direction: row;
       justify-content: space-between;
       position: relative;
-      z-index: 3;
+      z-index: 4;
     }
 
     &__phone {

@@ -1,0 +1,190 @@
+@import "../variables.less";
+
+.modal {
+  &-fail {
+    display: none;
+
+    @media (min-width: @tabletWidth) {
+      width: 460px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      z-index: 15;
+      background-color: @white;
+      color: @white;
+      margin: 0 auto;
+      box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+      border-radius: 5px;
+      transform: translate(-50%, -50%);
+
+      @media (min-width: @desktopWidth) {
+        width: 780px;
+      }
+
+      &__wrapper {
+        width: 350px;
+        margin: 0 auto;
+        margin-bottom: 34px;
+
+        @media (min-width: @desktopWidth) {
+          width: 360px;
+          margin-bottom: 64px;
+        }
+      }
+
+      &__title {
+        width: 260px;
+        margin: 0 auto;
+        padding-top: 40px;
+        margin-bottom: 23px;
+        color: @black;
+        font-size: @fontSizeMega;
+        line-height: @lineHeightMulti;
+        text-align: center;
+
+        @media (min-width: @desktopWidth) {
+          width: 360px;
+          margin-bottom: 20px;
+          padding-top: 43px;
+        }
+      }
+
+      &__description {
+        width: 320px;
+        color: @midnight;
+        font-size: @fontSizeBig;
+        line-height: @lineHeightMoreSmall;
+        text-align: center;
+        margin: 0 auto;
+
+        @media (min-width: @desktopWidth) {
+          width: 360px;
+        }
+      }
+
+      &__button {
+        width: 296px;
+        height: 59px;
+        padding: 0;
+        margin: 0 27px;
+        margin-bottom: 54px;
+        font-size: @fontSizeBig;
+        line-height: @lineHeightAverage;
+        font-weight: @fontWeightBold;
+        color: @white;
+        text-transform: uppercase;
+        background-color: @green;
+        border-radius: 3px;
+        border-style: none;
+
+        @media (min-width: @desktopWidth) {
+          margin: 0 32px;
+          margin-top: 52px;
+          margin-bottom: 52px;
+        }
+      }
+
+      &__sub {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+
+        @media (min-width: @desktopWidth) {
+          background-color: @greyBackground;
+        }
+      }
+    }
+  }
+
+  &-succes {
+    display: none;
+
+    @media (min-width: @tabletWidth) {
+      width: 460px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      z-index: 15;
+      background-color: @white;
+      color: @white;
+      margin: 0 auto;
+      box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+      border-radius: 5px;
+      transform: translate(-50%, -50%);
+
+      @media (min-width: @desktopWidth) {
+        width: 780px;
+      }
+
+      &__wrapper {
+        width: 350px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+
+        @media (min-width: @desktopWidth) {
+          width: 400px;
+          margin-bottom: 36px;
+        }
+      }
+
+      &__title {
+        width: 260px;
+        margin: 0 auto;
+        padding-top: 40px;
+        margin-bottom: 23px;
+        color: @black;
+        font-size: @fontSizeMega;
+        line-height: @lineHeightMulti;
+        text-align: center;
+
+        @media (min-width: @desktopWidth) {
+          width: 400px;
+          margin-bottom: 25px;
+        }
+      }
+
+      &__description {
+        width: 320px;
+        color: @midnight;
+        font-size: @fontSizeBig;
+        line-height: @lineHeightMoreSmall;
+        text-align: center;
+        margin: 0 auto;
+
+        @media (min-width: @desktopWidth) {
+          width: 380px;
+        }
+      }
+
+      &__button {
+        width: 456px;
+        height: 59px;
+        padding: 0;
+        margin: 0;
+        margin-top: 52px;
+        margin-bottom: 52px;
+        font-size: @fontSizeBig;
+        line-height: @lineHeightAverage;
+        font-weight: @fontWeightBold;
+        color: @white;
+        text-transform: uppercase;
+        background-color: @green;
+        border-radius: 3px;
+        border-style: none;
+
+        @media (min-width: @desktopWidth) {
+          margin: 0 32px;
+          margin-top: 52px;
+          margin-bottom: 52px;
+        }
+      }
+
+      &__sub {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        background-color: @greyBackground;
+      }
+    }
+  }
+}

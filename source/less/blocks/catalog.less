@@ -1,22 +1,15 @@
 @import "../variables.less";
 
 .catalog {
-  min-width: 320px;
-  width: 100%;
+  width: 320px;
   margin: 0 auto;
 
   @media (min-width: @tabletWidth) {
-    min-width: 620px;
+    width: 660px;
   }
 
   @media (min-width: @desktopWidth) {
-    min-width: 940px;
-  }
-
-  &__wrapper {
-    @media (min-width: @tabletWidth) {
-      padding: 0 20px;
-    }
+    width: 100%;
   }
 
   &__description {
@@ -25,15 +18,21 @@
     line-height: @lineHeightAverage;
     font-weight: @fontWeightNormal;
     text-align: center;
-    width: 280px;
+    width: 250px;
     margin: 0 auto;
-    padding-top: 54px;
-    margin-bottom: 60px;
+    padding-top: 45px;
+    margin-bottom: 49px;
 
     @media (min-width: @tabletWidth) {
-      width: 400px;
-      padding-top: 100px;
-      margin-bottom: 85px;
+      font-size: @fontSizeBig;
+      width: 450px;
+      padding-top: 90px;
+      margin-bottom: 77px;
+    }
+
+    @media (min-width: @desktopWidth) {
+      width: 600px;
+      margin-bottom: 90px;
     }
   }
 
@@ -49,22 +48,36 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      padding-top: 29px;
     }
 
     @media (min-width: @desktopWidth) {
       width: 940px;
       margin: 0 auto;
+      padding-top: 0;
     }
   }
 
   &__item {
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 18px;
+
+    &:first-child {
+      padding-top: 16px;
+
+      @media (min-width: @tabletWidth) {
+        padding-top: 17px;
+      }
+
+      @media (min-width: @desktopWidth) {
+        padding-top: 51px;
+      }
+    }
 
     @media (min-width: @tabletWidth) {
       width: 300px;
       margin: 0;
-      padding-top: 50px;
+      padding-top: 17px;
 
       &:nth-child(2n) {
         margin-left: 20px;
@@ -72,6 +85,8 @@
     }
 
     @media (min-width: @desktopWidth) {
+      padding-top: 51px;
+
       &:nth-child(2n) {
         margin-left: 0;
       }
@@ -112,6 +127,46 @@
   &__item--image-day {
     width: 320px;
     margin: 0 auto;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 140px;
+      height: 36px;
+      top: 0;
+      right: 20px;
+      background-color: @pink;
+
+      @media (min-width: @tabletWidth) {
+        top: 57px;
+      }
+
+      @media (min-width: @desktopWidth) {
+        top: 53px;
+        right: 130px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "Панорама дня";
+      color: @white;
+      top: 6px;
+      right: 43px;
+      font-size: @fontSizeTiny;
+      line-height: @lineHeightMoreSmall;
+      text-transform: uppercase;
+
+      @media (min-width: @tabletWidth) {
+        top: 63px;
+      }
+
+      @media (min-width: @desktopWidth) {
+        top: 59px;
+        right: 153px;
+      }
+    }
 
     @media (min-width: @tabletWidth) {
       width: 660px;
@@ -122,6 +177,7 @@
     @media (min-width: @desktopWidth) {
       width: 1200px;
       margin: 0 auto;
+      margin-bottom: -5px;
     }
   }
 
@@ -136,12 +192,13 @@
       padding: 0;
       padding-top: 23px;
       padding-left: 30px;
-      padding-bottom: 32px;
+      padding-bottom: 28px;
       justify-content: space-between;
     }
 
     @media (min-width: @desktopWidth) {
       width: 910px;
+      padding-bottom: 37px;
     }
   }
 
@@ -179,22 +236,29 @@
     width: 253px;
     padding-left: 17px;
     padding-right: 10px;
-    padding-top: 15px;
+    padding-top: 17px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    position: relative;
+    top: -4px;
 
     @media (min-width: @tabletWidth) {
-      width: 232px;
+      width: 250px;
       margin: 0;
+      padding-top: 22px;
       padding-left: 30px;
-      padding-right: 38px;
+      padding-right: 20px;
+      padding-bottom: 4px;
     }
 
     @media (min-width: @desktopWidth) {
       width: 245px;
-      padding-right: 25px;
+      padding-top: 23px;
+      padding-left: 29px;
+      padding-right: 26px;
+      padding-bottom: 4px;
     }
   }
 
@@ -224,7 +288,7 @@
 
   &__text {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 11px;
     width: 260px;
     color: @midnight;
     font-size: @fontSizeSmall;
@@ -242,7 +306,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 26px;
+    margin-bottom: 18px;
 
     @media (min-width: @tabletWidth) {
       width: 240px;

@@ -2,22 +2,19 @@
 
 .header {
   color: @white;
-  background-color: @midnight;
-  width: 100%;
-  min-width: 320px;
-  margin: 0 auto;
+  width: 320px;
   padding: 0;
   display: block;
   position: relative;
   z-index: 3;
+  background-color: rgba(0, 0, 0, 0.3);
 
   @media (min-width: @tabletWidth) {
-    min-width: 660px;
-    margin: 0 auto;
+    width: 660px;
   }
 
   @media (min-width: @desktopWidth) {
-    min-width: 960px;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -40,10 +37,15 @@
   &__wrapper {
     margin: 0 auto;
     padding: 22px 20px 21px 20px;
-    width: 100%;
+    width: 280px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (min-width: @tabletWidth) {
+      width: 620px;
+      padding: 27px 20px 43px 20px;
+    }
 
     @media (min-width: @desktopWidth) {
       width: 150px;
@@ -53,9 +55,11 @@
   }
 
   &__logo {
+    width: 74px;
     height: 23px;
 
     @media (min-width: @tabletWidth) {
+      width: 145px;
       height: 40px;
     }
 

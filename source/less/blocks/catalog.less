@@ -1,11 +1,12 @@
 @import "../variables.less";
 
 .catalog {
-  width: 320px;
+  background-color: @white;
+  min-width: 320px;
   margin: 0 auto;
 
   @media (min-width: @tabletWidth) {
-    width: 660px;
+    min-width: 660px;
   }
 
   @media (min-width: @desktopWidth) {
@@ -325,6 +326,30 @@
     @media (min-width: @tabletWidth) {
       order: -1;
       padding-left: 0;
+    }
+  }
+
+  &__upload {
+    color: @midnight;
+    font-size: @fontSizeSmall;
+    line-height: @lineHeightAverage;
+    font-weight: @fontWeightNormal;
+    text-align: center;
+    width: 260px;
+    padding-top: 37px;
+    padding-bottom: 41px;
+    margin: 0 auto;
+
+    @media (min-width: @tabletWidth) {
+      font-size: @fontSizeBig;
+      width: 450px;
+      padding-top: 60px;
+      padding-bottom: 71px;
+    }
+
+    @media (min-width: @desktopWidth) {
+      padding-top: 54px;
+      padding-bottom: 66px;
     }
   }
 }

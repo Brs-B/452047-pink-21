@@ -2,12 +2,13 @@
 
 .footer {
   background-color: @white;
+  min-width: 320px;
+  width: 100%;
   margin: 0 auto;
-  width: 320px;
   padding-bottom: 40px;
 
   @media (min-width: @tabletWidth) {
-    width: 660px;
+    min-width: 660px;
     padding-bottom: 40px;
   }
 
@@ -69,12 +70,18 @@
 
   .socials {
     margin-bottom: 41px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 
     @media (min-width: @tabletWidth) {
       margin: 0;
     }
 
     @media (min-width: @desktopWidth) {
+      width: 172px;
       margin: 0;
       padding-top: 0;
     }
@@ -170,52 +177,22 @@
 
     @media (min-width: @tabletWidth) {
       padding-top: 28px;
-
-      .socials {
-        position: relative;
-        left: 2px;
-      }
     }
 
     @media (min-width: @desktopWidth) {
       padding-top: 64px;
-
-      .socials {
-        position: relative;
-        left: 5px;
-      }
     }
   }
 
   &--form {
     padding-top: 53px;
 
-    .footer__logo {
-      margin-bottom: 38px;
-    }
-
     @media (min-width: @tabletWidth) {
       padding-top: 75px;
-
-      .footer__logo {
-        margin-bottom: 0;
-      }
-
-      .socials {
-        position: relative;
-        left: 4px;
-        top: 2px;
-      }
     }
 
     @media (min-width: @desktopWidth) {
       padding-top: 66px;
-
-      .socials {
-        position: relative;
-        left: 4px;
-        top: -2px;
-      }
     }
   }
 
@@ -225,8 +202,9 @@
     @media (min-width: @tabletWidth) {
       padding-top: 30px;
 
-      .socials {
+      .footer__socials {
         position: relative;
+        top: -1px;
         left: 4px;
       }
     }
@@ -234,10 +212,10 @@
     @media (min-width: @desktopWidth) {
       padding-top: 95px;
 
-      .socials {
+      .footer__socials {
         position: relative;
-        left: 4px;
         top: -2px;
+        left: 8px;
       }
     }
   }

@@ -3,13 +3,13 @@
 .reviews {
   background-color: @white;
   margin: 0 auto;
-  width: 320px;
+  min-width: 320px;
   padding-top: 42px;
   position: relative;
   z-index: 2;
 
   @media (min-width: @tabletWidth) {
-    width: 660px;
+    min-width: 660px;
     padding-top: 0;
   }
 
@@ -21,6 +21,7 @@
   &__wrapper {
     @media (min-width: @tabletWidth) {
       width: 660px;
+      margin: 0 auto;
       padding-top: 88px;
     }
 

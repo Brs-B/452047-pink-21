@@ -5,8 +5,9 @@
   margin: 0 auto;
   min-width: 320px;
   padding-top: 42px;
+  padding-bottom: 1px;
   position: relative;
-  z-index: 2;
+  z-index: 4;
 
   @media (min-width: @tabletWidth) {
     min-width: 660px;
@@ -207,7 +208,16 @@
     opacity: 0.3;
     border: 3px solid @white;
     border-radius: 50%;
+    outline: none;
 
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
 
     &--current {
       width: 6px;
@@ -217,6 +227,12 @@
       opacity: 1;
       border: 3px solid @midnight;
       border-radius: 50%;
+
+      &:hover,
+      &:focus,
+      &:active {
+        opacity: 1;
+      }
     }
   }
 }

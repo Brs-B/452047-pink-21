@@ -125,6 +125,15 @@
       border-radius: 50%;
       background: @white;
       border: 3px solid fade(@midnight, 10%);
+
+      &:hover,
+      &:focus {
+        border: 3px solid @midnight;
+      }
+
+      &:active {
+        border: 3px solid fade(@midnight, 10%);
+      }
     }
 
     &__link svg {
@@ -181,6 +190,12 @@
 
     @media (min-width: @desktopWidth) {
       padding-top: 64px;
+
+      .footer__socials {
+        position: relative;
+        top: 0;
+        left: 7px;
+      }
     }
   }
 
@@ -188,11 +203,23 @@
     padding-top: 53px;
 
     @media (min-width: @tabletWidth) {
-      padding-top: 75px;
+      padding-top: 76px;
+
+      .footer__socials {
+        position: relative;
+        top: 1px;
+        left: 4px;
+      }
     }
 
     @media (min-width: @desktopWidth) {
       padding-top: 66px;
+
+      .footer__socials {
+        position: relative;
+        top: -2px;
+        left: 8px;
+      }
     }
   }
 

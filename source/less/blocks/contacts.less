@@ -135,6 +135,18 @@
     line-height: @lineHeightHuge;
     font-weight: @fontWeightLight;
     text-align: center;
+
+    &:hover,
+    &:focus {
+      color: @midnight;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: @midnight;
+      opacity: 0.3;
+      text-decoration: none;
+    }
   }
 
   &__phone-number {
@@ -155,6 +167,7 @@
 
   &__address {
     margin: 0;
+    cursor: pointer;
   }
 
   &__phone-number,

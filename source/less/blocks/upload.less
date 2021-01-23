@@ -37,12 +37,13 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding-top: 57px;
+      padding-top: 56px;
       padding-bottom: 49px;
     }
 
     @media (min-width: @desktopWidth) {
       width: 800px;
+      padding-top: 57px;
       padding-left: 80px;
       padding-right: 60px;
       padding-bottom: 52px;
@@ -183,8 +184,29 @@
 
   &__scale {
     height: 2px;
-    background: #283645;
+    background: @midnight;
     position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 1px;
+      top: 35px;
+      left: -40px;
+      background-color: @midnight;
+      opacity: 0.1;
+
+      @media (min-width: @tabletWidth) {
+        width: 275px;
+        left: -55px;
+      }
+
+      @media (min-width: @desktopWidth) {
+        width: 415px;
+        left: -91px;
+      }
+    }
 
     &-toggle {
       position: absolute;
@@ -250,7 +272,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding-top: 37px;
+    padding-top: 38px;
     padding-bottom: 41px;
 
     @media (min-width: @tabletWidth) {
@@ -280,6 +302,7 @@
     border: 3px solid @pink;
     box-sizing: border-box;
     border-radius: 30px;
+    outline: none;
 
     @media (min-width: @tabletWidth) {
       width: 260px;
@@ -287,6 +310,16 @@
 
     @media (min-width: @desktopWidth) {
       width: 183px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: @pink;
+      color: @white;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
     }
   }
 
@@ -301,6 +334,7 @@
     box-sizing: border-box;
     border-radius: 30px;
     opacity: 0.1;
+    outline: none;
 
     @media (min-width: @tabletWidth) {
       width: 260px;
@@ -308,6 +342,16 @@
 
     @media (min-width: @desktopWidth) {
       width: 183px;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.3;
+    }
+
+    &:active {
+      background-color: @midnight;
+      color: rgba(255, 255, 255, 0.3);
     }
   }
 }

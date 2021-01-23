@@ -1,7 +1,7 @@
 @import "../variables.less";
 
 .info {
-  background-color: @greyBackground;
+  background-color: @white;
   margin: 0 auto;
   min-width: 320px;
   position: relative;
@@ -12,22 +12,6 @@
 
   @media (min-width: @desktopWidth) {
     width: 100%;
-  }
-
-  &::before {
-    @media (min-width: @desktopWidth) {
-      position: absolute;
-      content: "";
-      top: 265px;
-      left: 0;
-      z-index: 4;
-      background-image: url("../../img/white background.svg");
-      background-position: center 0;
-      background-repeat: no-repeat;
-      height: 200px;
-      width: 100%;
-      overflow: visible;
-    }
   }
 
   &__offer {
@@ -105,33 +89,11 @@
     }
   }
 
-  &__purpose::before {
-    position: absolute;
-    content: "";
-    top: -200px;
-    left: 0;
-    z-index: 1;
-    width: 320px;
-    height: 200px;
-    background-image: url("../../img/grey background.svg");
-
-    @media (min-width: @tabletWidth) {
-      background-image: url("../../img/white background.svg");
-      width: 660px;
-      top: -147px;
-      z-index: 2;
-    }
-
-    @media (min-width: @desktopWidth) {
-      display: none;
-    }
-  }
-
   &__purpose {
     position: relative;
     width: 320px;
     margin: 0 auto;
-    background-color: @greyBackground;
+    background-color: @white;
 
     @media (min-width: @tabletWidth) {
       width: 620px;
@@ -150,9 +112,41 @@
       height: 570px;
       padding-top: 26px;
     }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -75px;
+      left: 0;
+      z-index: 1;
+      width: 320px;
+      height: 999px;
+      background-image: url("../../img/mobile-grey-background.svg");
+      background-repeat: no-repeat;
+      background-position: center 0;
+
+      @media (min-width: @tabletWidth) {
+        background-image: url("../../img/tablet-grey-background.svg");
+        width: 660px;
+        height: 695px;
+        top: -20px;
+        z-index: 1;
+      }
+
+      @media (min-width: @desktopWidth) {
+        background-image: url("../../img/desktop-grey-background.svg");
+        background-repeat: no-repeat;
+        background-position: center 0;
+        width: 960px;
+        height: 715px;
+        top: 23px;
+      }
+    }
   }
 
   &__list {
+    position: relative;
+    z-index: 3;
     list-style: none;
     margin: 0;
     padding: 0 30px;
@@ -249,6 +243,8 @@
 
   &__phones {
     height: 277px;
+    position: relative;
+    z-index: 2;
   }
 
   &__phone {
@@ -259,6 +255,7 @@
     display: block;
     margin: 0 auto;
     position: relative;
+    z-index: 1;
   }
 
   @media (min-width: @tabletWidth) {
@@ -292,6 +289,18 @@
       justify-content: space-between;
       position: relative;
       z-index: 4;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 960px;
+        height: 25px;
+        top: -290px;
+        left: -20px;
+        background-image: url("../../img/shadow.png");
+        background-position: center 0;
+        background-repeat: repeat;
+      }
     }
 
     &__phone {

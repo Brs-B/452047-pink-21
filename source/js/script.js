@@ -4,6 +4,8 @@ let headerWrap = document.querySelector('.header__wrapper');
 
   menuMain.classList.remove('menu--nojs');
 
+  headerWrap.classList.remove('header__wrapper--nojs');
+
   menuToggle.addEventListener('click', function() {
     if (menuMain.classList.contains('menu--closed')) {
       menuMain.classList.remove('menu--closed');

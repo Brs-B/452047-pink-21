@@ -1,24 +1,24 @@
 @import "../variables.less";
 
 .menu {
-  width: 100%;
-  min-width: 320px;
+  width: 320px;
   margin: 0 auto;
   display: block;
+  position: relative;
 
   @media (min-width: @tabletWidth) {
-    width: 100%;
+    width: 660px;
   }
 
   @media (min-width: @desktopWidth) {
-    width: auto;
+    width: 620px;
     margin: 0;
     height: 110px;
   }
 
   &__toggle {
     position: absolute;
-    top: 25px;
+    top: -43px;
     right: 20px;
     z-index: 2;
     display: block;
@@ -29,8 +29,8 @@
     background-color: @midnight;
 
     @media (min-width: @tabletWidth) {
-      top: 40px;
-      right: 20px;
+      top: -70px;
+      right: 25px;
     }
 
     @media (min-width: @desktopWidth) {
@@ -46,8 +46,6 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 70px;
-      flex-grow: 1;
       margin: 0;
       padding: 0;
     }
@@ -65,9 +63,27 @@
     box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
   }
 
+  &--closed .menu__toggle:hover::before,
+  &--closed .menu__toggle:focus::before {
+    background-color: @pink;
+    box-shadow: 0 10px 0 0 @pink, 0 20px 0 0 @pink;
+  }
+
+  &--closed .menu__toggle:active::before {
+    background-color: rgba(210, 40, 86, 0.3);
+    box-shadow: 0 10px 0 0 rgba(210, 40, 86, 0.3), 0 20px 0 0 rgba(210, 40, 86, 0.3);
+  }
+
+  &--opened {
+    @media (max-width: @preDesktopWidth) {
+      opacity: 1;
+      background-color: @midnight;
+    }
+  }
+
   &--opened .menu__toggle {
     // Крест для закрытия
-    top: 1px;
+    top: -64px;
     right: 4px;
 
     &::before,
@@ -81,8 +97,8 @@
       background-color: @white;
 
       @media (min-width: @tabletWidth) {
-        top: 53px;
-        left: 6px;
+        top: 7px;
+        left: 10px;
       }
     }
 
@@ -93,10 +109,32 @@
     &::after {
       transform: rotate(-45deg);
     }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: @pink;
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: rgba(210, 40, 86, 0.3);
+    }
   }
 
   &--nojs .menu__toggle {
     display: none;
+  }
+
+  &--nojs .menu__list {
+    @media (max-width: @preDesktopWidth) {
+      display: block;
+    }
+  }
+
+  &--nojs .menu__item {
+    @media (max-width: @preDesktopWidth) {
+      background-color: @midnight;
+    }
   }
 
   &__list {
@@ -105,12 +143,11 @@
     padding: 0;
 
     @media (min-width: @desktopWidth) {
+      width: 620px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 70px;
-      flex-grow: 1;
       margin: 0;
       padding: 0;
     }
@@ -124,7 +161,9 @@
     text-align: center;
 
     @media (min-width: @desktopWidth) {
-      padding-top: 38px;
+      line-height: @lineHeightTiny;
+      font-weight: @fontWeightNormal;
+      padding-top: 46px;
       text-transform: none;
     }
   }
@@ -133,17 +172,27 @@
     display: block;
     color: @white;
     text-decoration: none;
-    padding: 17px 80px 13px;
+    padding: 15px 80px 15px;
     border-top: 1px solid @blueGrey;
     border-bottom: 1px solid @black;
 
     @media (min-width: @tabletWidth) {
-      padding: 17px 250px 13px;
+      padding: 15px 250px 15px;
     }
 
     @media (min-width: @desktopWidth) {
       border: none;
       padding: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: @pink;
+    }
+
+    &:active {
+      color: @white;
+      opacity: 0.3;
     }
   }
 
@@ -155,10 +204,16 @@
         content: "";
         position: absolute;
         right: 0;
-        bottom: -10px;
+        bottom: -12px;
         left: 0;
         height: 3px;
         background-color: @white;
+      }
+
+      .menu__item-link {
+        &:hover {
+          color: @white;
+        }
       }
     }
   }

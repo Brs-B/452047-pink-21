@@ -1,29 +1,27 @@
 @import "../variables.less";
 
-.page {
-  &__body {
-    font-family: "Open Sans", "Arial", sans-serif;
-    text-transform: none;
-    font-style: normal;
-    color: @black;
-    background-color: @midnightBackground;
-    display: grid;
-    grid-template-rows: min-content 1fr min-content;
-    align-content: start;
-    min-height: 100%;
-    padding: 0;
-    margin: 0 auto;
-    min-width: 320px;
-    box-sizing: border-box;
+.page-body {
+  font-family: "Open Sans", "Arial", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  color: @black;
+  background-color: @midnightBackground;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  min-height: 100%;
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  box-sizing: border-box;
 
-    @media (min-width: @tabletWidth) {
-      min-width: 660px;
-    }
+  @media (min-width: @tabletWidth) {
+    min-width: 660px;
+  }
 
-    @media (min-width: @desktopWidth) {
-      min-width: 960px;
-      width: 100%;
-      position: relative;
-    }
+  @media (min-width: @desktopWidth) {
+    min-width: 960px;
+    width: 100%;
+    position: relative;
   }
 }

@@ -1,0 +1,48 @@
+@import "../variables.less";
+
+.slider {
+  &__toggles {
+    padding-top: 16px;
+
+    @media (min-width: @tabletWidth) {
+      margin: 0;
+      padding-top: 35px;
+    }
+  }
+
+  &__toggle {
+    width: 6px;
+    height: 6px;
+    padding: 3px 3px;
+    background-color: @midnight;
+    opacity: 0.3;
+    border: 3px solid @white;
+    border-radius: 50%;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+
+    &--current {
+      width: 6px;
+      height: 6px;
+      padding: 3px 3px;
+      background-color: @white;
+      opacity: 1;
+      border: 3px solid @midnight;
+      border-radius: 50%;
+
+      &:hover,
+      &:focus,
+      &:active {
+        opacity: 1;
+      }
+    }
+  }
+}

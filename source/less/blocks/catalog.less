@@ -42,6 +42,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
+    position: relative;
 
     @media (min-width: @tabletWidth) {
       margin: 0 auto;
@@ -56,6 +57,27 @@
       width: 940px;
       margin: 0 auto;
       padding-top: 0;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 140px;
+        height: 36px;
+        top: -547px;
+        right: 0;
+        background-color: @pink;
+      }
+
+      &::after {
+        position: absolute;
+        content: "Панорама дня";
+        color: @white;
+        top: -541px;
+        right: 23px;
+        font-size: @fontSizeTiny;
+        line-height: @lineHeightMoreSmall;
+        text-transform: uppercase;
+      }
     }
   }
 
@@ -125,9 +147,10 @@
     }
   }
 
-  &__item--image-day {
+  &__item-day {
     width: 320px;
     margin: 0 auto;
+    padding-top: 0;
     position: relative;
 
     &::before {
@@ -144,8 +167,7 @@
       }
 
       @media (min-width: @desktopWidth) {
-        top: 53px;
-        right: 130px;
+        display: none;
       }
     }
 
@@ -164,8 +186,7 @@
       }
 
       @media (min-width: @desktopWidth) {
-        top: 59px;
-        right: 153px;
+        display: none;
       }
     }
 
@@ -176,13 +197,13 @@
     }
 
     @media (min-width: @desktopWidth) {
-      width: 1200px;
+      width: 100%;
       margin: 0 auto;
       margin-bottom: -5px;
     }
   }
 
-  &__item--image-day &__author-info {
+  &__item-day &__author-info {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -203,7 +224,7 @@
     }
   }
 
-  &__item--image-day &__text {
+  &__item-day &__text {
     @media (min-width: @tabletWidth) {
       width: 520px;
       order: 2;
@@ -216,7 +237,7 @@
     }
   }
 
-  &__item--image-day &__like {
+  &__item-day &__like {
     @media (min-width: @tabletWidth) {
       width: 120px;
       order: 1;
@@ -227,8 +248,9 @@
 
   &__wide-image {
     @media (min-width: @desktopWidth) {
-      width: 1200px;
+      width: 100%;
       height: 506px;
+      object-fit: cover;
     }
   }
 
